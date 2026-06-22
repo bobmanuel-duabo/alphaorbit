@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlphaOrbit Worldwide Ltd | Global Services</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Embedded layout helpers for rapid setup */
+        header {
+            background-color: var(--primary-navy);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            color: white;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .logo-text h1 {
+            font-size: 1.4rem;
+            color: var(--text-light);
+            letter-spacing: 1px;
+        }
+
+        .logo-text span {
+            color: var(--accent-gold);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0, 11, 107, 0.85), rgba(0, 11, 107, 0.9)), url('assets/hero-bg.jpg');
+            background-size: cover;
+            color: white;
+            padding: 100px 5%;
+            text-align: center;
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 50px 5%;
+        }
+
+        .pillar-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            border-top: 4px solid var(--primary-navy);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="assets/1000151666.jpg" alt="AlphaOrbit Logo" class="logo-img">
+            <div class="logo-text">
+                <h1>ALPHA<span>ORBIT</span></h1>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Divisions</a></li>
+                <li><a href="#">Logistics</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Global Solutions. Seamless Delivery.</h2>
+        <p style="margin: 15px 0 30px; color: #cbd5e1;">Connecting international trade across agro-commodities,
+            sustainable energy, apparel, corporate logistics, and healthcare consultancy.</p>
+        <a href="#contact" class="btn-gold">Partner With Us</a>
+    </section>
+
+    <main>
+        <h2 style="text-align: center; margin-top: 40px;">Our Core Divisions</h2>
+        <div class="pillars-grid">
+            <div class="pillar-card">
+                <h3>🌾 Agro-Commodities</h3>
+                <p>Foodservice, foodstuffs, and premium seafood export lines.</p>
+            </div>
+            <div class="pillar-card">
+                <h3>🔥 Sustainable Energy</h3>
+                <p>High-grade commercial hardwood charcoal export operations.</p>
+            </div>
+            <div class="pillar-card">
+                <h3>🪡 Fashion & Accessories</h3>
+                <p>Premium global apparel design, manufacturing, and distribution.</p>
+            </div>
+            <div class="pillar-card">
+                <h3>⚓ Global Logistics</h3>
+                <p>End-to-end freight forwarding, customs clearance, and cold-chain support.</p>
+            </div>
+            <div class="pillar-card">
+                <h3>🤝 Caregiver Contracting</h3>
+                <p>Professional healthcare personnel recruitment and workforce consultancy.</p>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

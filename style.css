@@ -1,0 +1,41 @@
+/* AlphaOrbit Global Design Tokens */
+:root {
+    --primary-navy: #000b6b;
+    /* Extracted from logo background */
+    --accent-gold: #e5b842;
+    /* Extracted from logo 'A' & arrow */
+    --accent-gradient: linear-gradient(135deg, #f3d06c, #c59628);
+    --text-dark: #1e293b;
+    --text-light: #ffffff;
+    --bg-light: #f8fafc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Common Components */
+.btn-gold {
+    background: var(--accent-gradient);
+    color: #000;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.btn-gold:hover {
+    transform: translateY(-2px);
+}
