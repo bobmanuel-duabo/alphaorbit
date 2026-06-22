@@ -52,7 +52,7 @@
         }
 
         .hero {
-            background: linear-gradient(rgba(0, 11, 107, 0.85), rgba(0, 11, 107, 0.9)), url('assets/hero-bg.jpg');
+            background: linear-gradient(rgba(0, 11, 107, 0.85), rgba(0, 11, 107, 0.9));
             background-size: cover;
             color: white;
             padding: 100px 5%;
@@ -89,10 +89,8 @@
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Divisions</a></li>
-                <li><a href="#">Logistics</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#divisions">Divisions</a></li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
         </nav>
     </header>
@@ -104,32 +102,103 @@
         <a href="#contact" class="btn-gold">Partner With Us</a>
     </section>
 
-    <main>
-        <h2 style="text-align: center; margin-top: 40px;">Our Core Divisions</h2>
+    <main id="divisions">
+        <h2 style="text-align: center; margin-top: 40px; color: var(--primary-navy);">Our Core Divisions</h2>
         <div class="pillars-grid">
             <div class="pillar-card">
                 <h3>🌾 Agro-Commodities</h3>
-                <p>Foodservice, foodstuffs, and premium seafood export lines.</p>
+                <p>Foodservice solutions, local foodstuffs distribution, and premium seafood export lines.</p>
             </div>
             <div class="pillar-card">
                 <h3>🔥 Sustainable Energy</h3>
-                <p>High-grade commercial hardwood charcoal export operations.</p>
+                <p>High-grade commercial and industrial hardwood charcoal export operations.</p>
             </div>
             <div class="pillar-card">
                 <h3>🪡 Fashion & Accessories</h3>
-                <p>Premium global apparel design, manufacturing, and distribution.</p>
+                <p>Premium global apparel design, raw materials, and international textile logistics.</p>
             </div>
             <div class="pillar-card">
                 <h3>⚓ Global Logistics</h3>
-                <p>End-to-end freight forwarding, customs clearance, and cold-chain support.</p>
+                <p>End-to-end freight forwarding, freight tracking, customs clearance, and cold-chain distribution
+                    support.</p>
             </div>
             <div class="pillar-card">
                 <h3>🤝 Caregiver Contracting</h3>
-                <p>Professional healthcare personnel recruitment and workforce consultancy.</p>
+                <p>Professional healthcare personnel deployment, contract recruitment, and compliance consultancy.</p>
             </div>
         </div>
     </main>
 
+    <section id="contact" style="padding: 60px 5%; background-color: #fff;">
+        <div style="max-width: 600px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 10px; color: var(--primary-navy);">Get In Touch</h2>
+            <p style="text-align: center; margin-bottom: 30px; color: #64748b;">Select the specific AlphaOrbit division
+                you want to reach, and our specialized team will contact you shortly.</p>
+
+            <form id="contactForm" class="alpha-form">
+                <div class="form-group">
+                    <label for="fullName">Full Name / Corporate Name</label>
+                    <input type="text" id="fullName" required placeholder="John Doe or Company Ltd">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required placeholder="you@company.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="department">Select Department / Service</label>
+                    <select id="department" required onchange="handleDepartmentChange()">
+                        <option value="" disabled selected>-- Choose a Division --</option>
+                        <option value="agro">🌾 Agro-Commodities & Seafood Export</option>
+                        <option value="charcoal">🔥 Sustainable Energy (Hardwood Charcoal)</option>
+                        <option value="fashion">🪡 Fashion & Accessories</option>
+                        <option value="logistics">⚓ Global Logistics & Freight</option>
+                        <option value="caregiver">🤝 Caregiver Contracting & Consultancy</option>
+                    </select>
+                </div>
+
+                <div id="dynamicContainer" class="form-group" style="display: none;">
+                    <label id="dynamicLabel" for="dynamicInput">Extra Detail</label>
+                    <input type="text" id="dynamicInput">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" rows="5" required
+                        placeholder="Describe your corporate requirements..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-gold" style="width: 100%; margin-top: 10px;">Submit Inquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        function handleDepartmentChange() {
+            const dept = document.getElementById('department').value;
+            const container = document.getElementById('dynamicContainer');
+            const label = document.getElementById('dynamicLabel');
+            const input = document.getElementById('dynamicInput');
+
+            // Display container once a valid choice is picked
+            container.style.display = "block";
+
+            // Dynamically customize labels and input placeholders based on division choice
+            if (dept === 'agro' || dept === 'charcoal' || dept === 'fashion') {
+                label.innerText = "Estimated Order Volume / Destination Port";
+                input.placeholder = "e.g., 2 Containers to Port of Rotterdam";
+            } else if (dept === 'logistics') {
+                label.innerText = "Type of Cargo & Shipment Origin";
+                input.placeholder = "e.g., Perishable Seafood from Lagos Port";
+            } else if (dept === 'caregiver') {
+                label.innerText = "Are you hiring or looking for contracts?";
+                input.placeholder = "e.g., Looking to source 10 contract caregivers";
+            } else {
+                container.style.display = "none";
+            }
+        }
+    </script>
 </body>
 
 </html>
