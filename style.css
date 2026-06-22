@@ -1,20 +1,30 @@
-/* AlphaOrbit Global Design Tokens */
+/* ==========================================================================
+   1. GLOBAL ARCHITECTURE & BRANDING TOKENS
+   ========================================================================== */
 :root {
+    /* Color Spectrum extracted from corporate logo asset (1000151666.jpg) */
     --primary-navy: #000b6b;
-    /* Extracted from logo background */
+    /* Stable background corporate identity tone */
     --accent-gold: #e5b842;
-    /* Extracted from logo 'A' & arrow */
+    /* Vibrant forward-moving trade arrow indicator */
     --accent-gradient: linear-gradient(135deg, #f3d06c, #c59628);
+
+    /* Layout & Surface Neutrals */
+    --bg-light: #f8fafc;
+    --bg-card: #ffffff;
     --text-dark: #1e293b;
     --text-light: #ffffff;
-    --bg-light: #f8fafc;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
 }
 
+/* Base Browser Optimization Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -23,19 +33,209 @@ body {
     line-height: 1.6;
 }
 
-/* Common Components */
+/* ==========================================================================
+   2. REUSABLE SYSTEM COMPONENTS & BUTTONS
+   ========================================================================== */
 .btn-gold {
+    display: inline-block;
     background: var(--accent-gradient);
-    color: #000;
-    padding: 12px 24px;
+    color: #000000;
+    padding: 14px 28px;
     border: none;
-    border-radius: 4px;
-    font-weight: bold;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     cursor: pointer;
     text-decoration: none;
-    transition: transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(197, 150, 40, 0.2);
+    transition: all 0.25s ease;
 }
 
 .btn-gold:hover {
     transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(197, 150, 40, 0.35);
+}
+
+.btn-gold:active {
+    transform: translateY(0);
+}
+
+/* ==========================================================================
+   3. STRUCTURAL INTERFACE LAYOUTS (Header, Hero & Content)
+   ========================================================================== */
+/* Navigation Bar */
+header {
+    background-color: var(--primary-navy);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 6%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 11, 107, 0.15);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    width: 48px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.logo-text h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-light);
+    letter-spacing: 1.5px;
+}
+
+.logo-text span {
+    color: var(--accent-gold);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--accent-gold);
+}
+
+/* Brand Hero Presentation */
+.hero {
+    background: linear-gradient(rgba(0, 11, 107, 0.88), rgba(0, 11, 107, 0.92));
+    padding: 120px 6% 140px;
+    text-align: center;
+    color: var(--text-light);
+}
+
+.hero h2 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 16px;
+}
+
+/* Five Corporate Business Pillars Grid */
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    padding: 40px 6% 80px;
+}
+
+.pillar-card {
+    background: var(--bg-card);
+    padding: 35px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    text-align: center;
+    border-top: 5px solid var(--primary-navy);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.pillar-card:hover {
+    transform: translateY(-5px);
+    border-top-color: var(--accent-gold);
+}
+
+.pillar-card h3 {
+    font-size: 1.25rem;
+    color: var(--primary-navy);
+    margin-bottom: 12px;
+}
+
+.pillar-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   4. DYNAMIC INTERACTIVE LEAD-CAPTURE FORM UI
+   ========================================================================== */
+.alpha-form {
+    background: var(--bg-card);
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 9px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    background-color: #ffffff;
+    font-size: 1rem;
+    color: var(--text-dark);
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-navy);
+    box-shadow: 0 0 0 4px rgba(0, 11, 107, 0.08);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   5. RESPONSIVE SCREEN BREAKPOINTS (Mobile Adaptations)
+   ========================================================================== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .alpha-form {
+        padding: 25px 20px;
+    }
 }
