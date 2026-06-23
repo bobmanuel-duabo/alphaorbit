@@ -4,318 +4,594 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AlphaOrbit Worldwide Ltd | Global Services</title>
+    <title>AlphaOrbit Worldwide Ltd | Global Trade & Logistics Solutions</title>
+    <meta name="description"
+        content="AlphaOrbit Worldwide Ltd connects international trade across agro-commodities, sustainable energy, fashion logistics, global freight, and healthcare staffing. Partner with us today.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AlphaOrbit Worldwide Ltd | Global Trade & Logistics">
+    <meta property="og:description"
+        content="Connecting international trade across agro-commodities, sustainable energy, apparel, corporate logistics, and healthcare consultancy.">
+    <meta property="og:image" content="assets/1000151666.jpg">
+    <meta property="og:url" content="https://alphaorbitglobal.com">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" type="image/png" href="assets/1000151666.jpg">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Structural Layout Safeguards to guarantee 100% template stability */
-        header {
-            background-color: var(--primary-navy);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 5%;
-            color: white;
-        }
-
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .logo-img {
-            width: 50px;
-            height: auto;
-            border-radius: 4px;
-        }
-
-        .logo-text h1 {
-            font-size: 1.4rem;
-            color: var(--text-light);
-            letter-spacing: 1px;
-        }
-
-        .logo-text span {
-            color: var(--accent-gold);
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 20px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .hero {
-            background: linear-gradient(rgba(0, 11, 107, 0.85), rgba(0, 11, 107, 0.9));
-            background-size: cover;
-            color: white;
-            padding: 100px 5%;
-            text-align: center;
-        }
-
-        .footer-info {
-            background-color: var(--primary-navy);
-            color: white;
-            padding: 40px 5%;
-            text-align: center;
-            border-top: 3px solid var(--accent-gold);
-        }
-
-        .footer-info a {
-            color: var(--accent-gold);
-            text-decoration: none;
-            font-weight: 600;
-        }
-    </style>
 </head>
 
 <body>
 
-    <!-- Header Navigation Section -->
-    <header>
-        <div class="logo-container">
-            <img src="assets/1000151666.jpg" alt="AlphaOrbit Logo" class="logo-img">
-            <div class="logo-text">
-                <h1 style="line-height: 1.1; font-size: 1.5rem; font-weight: 800; letter-spacing: 1.5px; margin: 0;">
-                    ALPHA<span>ORBIT</span> <small
-                        style="font-size: 0.8rem; display: block; color: var(--accent-gold); letter-spacing: 2px; font-weight: 500; margin-top: 2px;">WORLDWIDE</small>
-                </h1>
+    <header id="site-header" role="banner">
+        <a href="#" class="logo-link" aria-label="AlphaOrbit Worldwide — Home">
+            <img src="assets/1000151666.jpg" alt="AlphaOrbit Worldwide Ltd logo" class="logo-img" width="44"
+                height="44">
+            <div class="logo-wordmark">
+                <span class="brand">ALPHA<em>ORBIT</em></span>
+                <span class="sub">Worldwide</span>
             </div>
-        </div>
-        <nav>
+        </a>
+
+        <nav class="main-nav" aria-label="Primary navigation">
             <ul>
                 <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#divisions">Divisions</a></li>
-                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#contact" class="nav-cta">Partner With Us</a></li>
             </ul>
         </nav>
+
+        <button class="hamburger" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+            <span></span><span></span><span></span>
+        </button>
     </header>
 
-    <!-- Brand Hero Showcase Section -->
-    <section class="hero">
-        <h2>Global Solutions. Seamless Delivery.</h2>
-        <p style="margin: 15px 0 30px; color: #cbd5e1;">Connecting international trade across agro-commodities,
-            sustainable energy, apparel, corporate logistics, and healthcare consultancy.</p>
-        <a href="#contact" class="btn-gold">Partner With Us</a>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+        <a href="#" onclick="closeMobile()">Home</a>
+        <a href="#about" onclick="closeMobile()">About Us</a>
+        <a href="#divisions" onclick="closeMobile()">Our Divisions</a>
+        <a href="#contact" class="m-cta" onclick="closeMobile()">Partner With Us</a>
+    </nav>
+
+    <section class="hero" aria-label="Hero">
+        <div class="hero-inner">
+            <div class="hero-badge">Global Trade Partner</div>
+            <h1>Global Solutions.<br><i>Seamless Delivery.</i></h1>
+            <p class="hero-sub">Connecting international trade across agro-commodities, sustainable energy, apparel,
+                corporate logistics, and healthcare staffing — from Nigeria to the world.</p>
+            <div class="hero-actions">
+                <a href="#contact" class="btn-gold"><i class="ti ti-handshake" aria-hidden="true"></i> Partner With
+                    Us</a>
+                <a href="#divisions" class="btn-outline"><i class="ti ti-grid-dots" aria-hidden="true"></i> Explore
+                    Divisions</a>
+            </div>
+        </div>
+        <div class="hero-stats" role="list" aria-label="Company highlights">
+            <div class="hero-stat" role="listitem"><span class="num">5</span><span class="lbl">Global Divisions</span>
+            </div>
+            <div class="hero-stat" role="listitem"><span class="num">30+</span><span class="lbl">Countries Served</span>
+            </div>
+            <div class="hero-stat" role="listitem"><span class="num">FCL/LCL</span><span class="lbl">Ocean
+                    Freight</span></div>
+            <div class="hero-stat" role="listitem"><span class="num">24/7</span><span class="lbl">Trade Support</span>
+            </div>
+        </div>
     </section>
 
-    <!-- Detailed Enterprise Pillars Section -->
-    <main id="divisions" style="padding: 60px 5%; background-color: var(--bg-light);">
-        <h2
-            style="text-align: center; margin-bottom: 10px; color: var(--primary-navy); font-size: 2.2rem; font-weight: 800;">
-            Our Specialized Divisions</h2>
-        <p
-            style="text-align: center; margin-bottom: 50px; color: var(--text-muted); max-width: 700px; margin-left: auto; margin-right: auto;">
-            Explore the exact specifications, capacities, and operational frameworks driving AlphaOrbit Worldwide's
-            international divisions.</p>
-
-        <div style="display: flex; flex-direction: column; gap: 40px; max-width: 1100px; margin: 0 auto;">
-
-            <!-- Pillar 1: Agro-Commodities -->
-            <div
-                style="background: var(--bg-card); padding: 40px; border-radius: 8px; border-left: 5px solid #22c55e; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
-                <div
-                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; margin-bottom: 15px;">
-                    <h3 style="color: var(--primary-navy); margin: 0; font-size: 1.5rem;">🌾 Agro-Commodities & Seafood
-                        Export</h3>
-                    <span
-                        style="background: #e8f5e9; color: #1b5e20; padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Global
-                        Distribution</span>
-                </div>
-                <p style="color: var(--text-dark); margin-bottom: 15px;">We bridge global agricultural gaps by handling
-                    bulk supply chains for local foodstuffs, dedicated foodservice solutions, and high-standard marine
-                    product processing.</p>
-                <ul
-                    style="list-style-type: '✓ '; padding-left: 20px; color: var(--text-muted); font-size: 0.95rem; line-height: 1.8;">
-                    <li><strong>Seafood Export:</strong> Premium fresh and frozen shrimp, prawns, and pelagic fish
-                        processed under international health standards.</li>
-                    <li><strong>Foodservice Supply:</strong> Direct contract sourcing for commercial restaurants, retail
-                        chains, and processing plants globally.</li>
-                </ul>
+    <div class="trust-bar" aria-label="Trust indicators">
+        <div class="trust-inner">
+            <span class="trust-label">Trusted for</span>
+            <span class="trust-sep" aria-hidden="true"></span>
+            <div class="trust-items">
+                <span class="trust-item"><i class="ti ti-shield-check" aria-hidden="true"></i> Verified
+                    Compliance</span>
+                <span class="trust-item"><i class="ti ti-certificate" aria-hidden="true"></i> International
+                    Standards</span>
+                <span class="trust-item"><i class="ti ti-world" aria-hidden="true"></i> Global Reach</span>
+                <span class="trust-item"><i class="ti ti-lock" aria-hidden="true"></i> Secure Transactions</span>
+                <span class="trust-item"><i class="ti ti-clock" aria-hidden="true"></i> On-Time Delivery</span>
             </div>
+        </div>
+    </div>
 
-            <!-- Pillar 2: Sustainable Energy -->
-            <div
-                style="background: var(--bg-card); padding: 40px; border-radius: 8px; border-left: 5px solid #ef4444; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
-                <div
-                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; margin-bottom: 15px;">
-                    <h3 style="color: var(--primary-navy); margin: 0; font-size: 1.5rem;">🔥 Sustainable Energy
-                        (Hardwood Charcoal)</h3>
-                    <span
-                        style="background: #ffebee; color: #b71c1c; padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Industrial
-                        & BBQ Grade</span>
+    <section class="about-section" id="about" aria-labelledby="about-heading">
+        <div class="about-grid">
+            <div class="about-content">
+                <p class="eyebrow">Who We Are</p>
+                <h2 class="section-title" id="about-heading">Built for Global Commerce. Driven by Integrity.</h2>
+                <div class="divider-bar" aria-hidden="true"></div>
+                <p class="section-sub">AlphaOrbit Worldwide Ltd is a Nigerian-based multinational trading company
+                    delivering end-to-end solutions across five strategic sectors. We serve importers, exporters,
+                    institutions, and enterprises worldwide with transparency, speed, and reliability.</p>
+                <div class="about-values">
+                    <div class="value-item">
+                        <span class="value-icon" aria-hidden="true">🌍</span>
+                        <div>
+                            <h4>Global Reach</h4>
+                            <p>Active trade corridors across Africa, Europe, Asia &amp; the Americas.</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-icon" aria-hidden="true">📋</span>
+                        <div>
+                            <h4>Full Compliance</h4>
+                            <p>Operations aligned with international trade law and health standards.</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-icon" aria-hidden="true">⚡</span>
+                        <div>
+                            <h4>Rapid Execution</h4>
+                            <p>Streamlined supply chain processes reducing time-to-delivery.</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-icon" aria-hidden="true">🤝</span>
+                        <div>
+                            <h4>Trusted Partnerships</h4>
+                            <p>Long-term relationships built on accountability and results.</p>
+                        </div>
+                    </div>
                 </div>
-                <p style="color: var(--text-dark); margin-bottom: 15px;">AlphaOrbit is a premier producer and exporter
-                    of premium, eco-consciously sourced hardwood charcoal, engineered for long burn times and minimal
-                    ash output.</p>
-                <ul
-                    style="list-style-type: '✓ '; padding-left: 20px; color: var(--text-muted); font-size: 0.95rem; line-height: 1.8;">
-                    <li><strong>Specifications:</strong> Fixed carbon > 75%, moisture < 7%, volatile matter < 5%,
-                            completely sparkless and smokeless.</li>
-                    <li><strong>Packaging Options:</strong> Available in bulk 20kg/25kg PP bags or fully custom branded
-                        craft paper bags for direct retail layout.</li>
-                </ul>
             </div>
-
-            <!-- Pillar 3: Fashion & Accessories -->
-            <div
-                style="background: var(--bg-card); padding: 40px; border-radius: 8px; border-left: 5px solid #a855f7; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
-                <div
-                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; margin-bottom: 15px;">
-                    <h3 style="color: var(--primary-navy); margin: 0; font-size: 1.5rem;">🪡 Fashion, Apparel & Textile
-                        Logistics</h3>
-                    <span
-                        style="background: #f3e5f5; color: #4a148c; padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Design
-                        & Supply Chain</span>
+            <div class="about-card-wrap">
+                <div class="about-card">
+                    <p class="a-eye">Our Mission</p>
+                    <h3>A unified platform for global trade excellence</h3>
+                    <p>We eliminate friction in international commerce by combining sector expertise with operational
+                        precision. Whether you are sourcing agro products, shipping freight, or staffing healthcare
+                        teams — AlphaOrbit is your single, trusted gateway.</p>
                 </div>
-                <p style="color: var(--text-dark); margin-bottom: 15px;">Managing international modern apparel design
-                    pipelines, manufacturing oversight, and bulk textile material distribution channels securely.</p>
-                <ul
-                    style="list-style-type: '✓ '; padding-left: 20px; color: var(--text-muted); font-size: 0.95rem; line-height: 1.8;">
-                    <li><strong>Garment Logistics:</strong> Flat-pack and Garment-on-Hanger (GOH) shipping methods
-                        protecting high-end inventory.</li>
-                    <li><strong>Sourcing Pipeline:</strong> Ethically structured raw material and finished fabric
-                        brokerage across leading manufacturing hubs.</li>
-                </ul>
+                <div class="about-float">🚀 Operational across 30+ Countries</div>
             </div>
+        </div>
+    </section>
 
-            <!-- Pillar 4: Global Logistics -->
-            <div
-                style="background: var(--bg-card); padding: 40px; border-radius: 8px; border-left: 5px solid #0284c7; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
-                <div
-                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; margin-bottom: 15px;">
-                    <h3 style="color: var(--primary-navy); margin: 0; font-size: 1.5rem;">⚓ Global Logistics & Trade
-                        Fulfillment</h3>
-                    <span
-                        style="background: #e0f2fe; color: #0369a1; padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">End-to-End
-                        Freight</span>
+    <main class="divisions-section" id="divisions" aria-labelledby="divisions-heading">
+        <div class="section-head-center">
+            <p class="eyebrow">What We Do</p>
+            <h2 class="section-title" id="divisions-heading">Our Specialized Divisions</h2>
+            <div class="divider-bar" aria-hidden="true"></div>
+            <p class="section-sub">Five fully operational divisions, each with dedicated teams, verified supply chains,
+                and global distribution networks.</p>
+        </div>
+
+        <div class="divisions-list">
+            <article class="div-card" aria-label="Agro-Commodities Division">
+                <div class="div-accent" style="background:#16a34a;" aria-hidden="true"></div>
+                <div class="div-body">
+                    <div class="div-header">
+                        <div class="div-title-row">
+                            <div class="div-icon" style="background:#f0fdf4;" aria-hidden="true">🌾</div>
+                            <h3>Agro-Commodities &amp; Seafood Export</h3>
+                        </div>
+                        <span class="div-badge" style="background:#dcfce7;color:#166534;">Global Distribution</span>
+                    </div>
+                    <p class="div-desc">We bridge global agricultural gaps by handling bulk supply chains for local
+                        foodstuffs, dedicated foodservice solutions, and high-standard marine product processing —
+                        connecting Nigerian produce to international markets.</p>
+                    <div class="div-specs">
+                        <div class="spec">
+                            <div class="spec-dot" style="background:#16a34a;" aria-hidden="true">✓</div>
+                            <div><strong>Seafood Export</strong><span>Premium fresh and frozen shrimp, prawns, and
+                                    pelagic fish processed under international health standards.</span></div>
+                        </div>
+                        <div class="spec">
+                            <div class="spec-dot" style="background:#16a34a;" aria-hidden="true">✓</div>
+                            <div><strong>Foodservice Supply</strong><span>Direct contract sourcing for commercial
+                                    restaurants, retail chains, and processing plants globally.</span></div>
+                        </div>
+                    </div>
                 </div>
-                <p style="color: var(--text-dark); margin-bottom: 15px;">End-to-end heavy freight forwarding solutions
-                    moving cargo across critical international pathways with absolute real-time visibility.</p>
-                <ul
-                    style="list-style-type: '✓ '; padding-left: 20px; color: var(--text-muted); font-size: 0.95rem; line-height: 1.8;">
-                    <li><strong>Operations:</strong> Ocean freight (FCL/LCL), responsive air cargo expediting, customs
-                        clearance assistance, and secure warehousing.</li>
-                    <li><strong>Cold-Chain Management:</strong> Temperature-controlled reefer tracking specialized for
-                        delicate agro-commodities and seafood.</li>
-                </ul>
-            </div>
+            </article>
 
-            <!-- Pillar 5: Caregiver Contracting -->
-            <div
-                style="background: var(--bg-card); padding: 40px; border-radius: 8px; border-left: 5px solid var(--accent-gold); box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
-                <div
-                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; margin-bottom: 15px;">
-                    <h3 style="color: var(--primary-navy); margin: 0; font-size: 1.5rem;">🤝 Caregiver Contracting & HR
-                        Consultancy</h3>
-                    <span
-                        style="background: #fffde7; color: #f57f17; padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Healthcare
-                        Staffing</span>
+            <article class="div-card" aria-label="Sustainable Energy Division">
+                <div class="div-accent" style="background:#dc2626;" aria-hidden="true"></div>
+                <div class="div-body">
+                    <div class="div-header">
+                        <div class="div-title-row">
+                            <div class="div-icon" style="background:#fff1f2;" aria-hidden="true">🔥</div>
+                            <h3>Sustainable Energy — Hardwood Charcoal</h3>
+                        </div>
+                        <span class="div-badge" style="background:#ffe4e6;color:#991b1b;">Industrial &amp; BBQ
+                            Grade</span>
+                    </div>
+                    <p class="div-desc">AlphaOrbit is a premier producer and exporter of eco-consciously sourced
+                        hardwood charcoal, engineered for long burn times and minimal ash output — serving industrial
+                        and retail markets worldwide.</p>
+                    <div class="div-specs">
+                        <div class="spec">
+                            <div class="spec-dot" style="background:#dc2626;" aria-hidden="true">✓</div>
+                            <div><strong>Technical Specifications</strong><span>Fixed carbon &gt;75%, moisture &lt;7%,
+                                    volatile matter &lt;5%, completely sparkless and smokeless.</span></div>
+                        </div>
+                        <div class="spec">
+                            <div class="spec-dot" style="background:#dc2626;" aria-hidden="true">✓</div>
+                            <div><strong>Packaging Options</strong><span>Bulk 20kg/25kg PP bags or fully custom branded
+                                    craft paper bags for direct retail.</span></div>
+                        </div>
+                    </div>
                 </div>
-                <p style="color: var(--text-dark); margin-bottom: 15px;">Providing verified, professional contract
-                    healthcare workforce placement solutions tailored for institutions, clinics, and eldercare
-                    frameworks.</p>
-                <ul
-                    style="list-style-type: '✓ '; padding-left: 20px; color: var(--text-muted); font-size: 0.95rem; line-height: 1.8;">
-                    <li><strong>Workforce Administration:</strong> Rigid background validation, medical clearance,
-                        credential auditing, and international compliance management.</li>
-                    <li><strong>Strategic Consultation:</strong> Institutional HR structural advisory helping healthcare
-                        groups manage shifts and minimize overhead.</li>
-                </ul>
-            </div>
+            </article>
 
+            <article class="div-card" aria-label="Fashion and Textile Division">
+                <div class="div-accent" style="background:#9333ea;" aria-hidden="true"></div>
+                <div class="div-body">
+                    <div class="div-header">
+                        <div class="div-title-row">
+                            <div class="div-icon" style="background:#faf5ff;" aria-hidden="true">🪡</div>
+                            <h3>Fashion, Apparel &amp; Textile Logistics</h3>
+                        </div>
+                        <span class="div-badge" style="background:#f3e8ff;color:#6b21a8;">Design &amp; Supply
+                            Chain</span>
+                    </div>
+                    <p class="div-desc">Managing international modern apparel design pipelines, manufacturing oversight,
+                        and bulk textile material distribution channels — ensuring ethical sourcing and protected
+                        delivery of high-value inventory.</p>
+                    <div class="div-specs">
+                        <div class="spec">
+                            <div class="spec-dot" style="background:#9333ea;" aria-hidden="true">✓</div>
+                            <div><strong>Garment Logistics</strong><span>Flat-pack and Garment-on-Hanger (GOH) shipping
+                                    methods protecting high-end inventory.</span></div>
+                        </div>
+                        <div class="spec">
+                            <div class="spec-dot" style="background:#9333ea;" aria-hidden="true">✓</div>
+                            <div><strong>Sourcing Pipeline</strong><span>Ethically structured raw material and finished
+                                    fabric brokerage across leading manufacturing hubs.</span></div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="div-card" aria-label="Global Logistics Division">
+                <div class="div-accent" style="background:#0284c7;" aria-hidden="true"></div>
+                <div class="div-body">
+                    <div class="div-header">
+                        <div class="div-title-row">
+                            <div class="div-icon" style="background:#f0f9ff;" aria-hidden="true">⚓</div>
+                            <h3>Global Logistics &amp; Trade Fulfillment</h3>
+                        </div>
+                        <span class="div-badge" style="background:#dbeafe;color:#1e40af;">End-to-End Freight</span>
+                    </div>
+                    <p class="div-desc">End-to-end heavy freight forwarding solutions moving cargo across critical
+                        international pathways with absolute real-time visibility — air, ocean, and ground, handled by
+                        experienced trade specialists.</p>
+                    <div class="div-specs">
+                        <div class="spec">
+                            <div class="spec-dot" style="background:#0284c7;" aria-hidden="true">✓</div>
+                            <div><strong>Freight Operations</strong><span>Ocean (FCL/LCL), air cargo, customs clearance,
+                                    and secure bonded warehousing.</span></div>
+                        </div>
+                        <div class="spec">
+                            <div class="spec-dot" style="background:#0284c7;" aria-hidden="true">✓</div>
+                            <div><strong>Cold-Chain Management</strong><span>Temperature-controlled reefer tracking for
+                                    delicate agro-commodities and seafood.</span></div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="div-card" aria-label="Caregiver Contracting Division">
+                <div class="div-accent" style="background:#d97706;" aria-hidden="true"></div>
+                <div class="div-body">
+                    <div class="div-header">
+                        <div class="div-title-row">
+                            <div class="div-icon" style="background:#fffbeb;" aria-hidden="true">🤝</div>
+                            <h3>Caregiver Contracting &amp; HR Consultancy</h3>
+                        </div>
+                        <span class="div-badge" style="background:#fef3c7;color:#92400e;">Healthcare Staffing</span>
+                    </div>
+                    <p class="div-desc">Providing verified, professional contract healthcare workforce placement
+                        solutions tailored for institutions, clinics, and eldercare frameworks — with rigorous
+                        compliance management at every stage.</p>
+                    <div class="div-specs">
+                        <div class="spec">
+                            <div class="spec-dot" style="background:#d97706;" aria-hidden="true">✓</div>
+                            <div><strong>Workforce Administration</strong><span>Background validation, medical
+                                    clearance, credential auditing, and international compliance management.</span>
+                            </div>
+                        </div>
+                        <div class="spec">
+                            <div class="spec-dot" style="background:#d97706;" aria-hidden="true">✓</div>
+                            <div><strong>Strategic Consultation</strong><span>HR structural advisory helping healthcare
+                                    groups manage shifts and minimize staffing overhead.</span></div>
+                        </div>
+                    </div>
+                </div>
+            </article>
         </div>
     </main>
 
-    <!-- Dynamic Contact Form Section -->
-    <section id="contact" style="padding: 60px 5%; background-color: #fff;">
-        <div style="max-width: 600px; margin: 0 auto;">
-            <h2 style="text-align: center; margin-bottom: 10px; color: var(--primary-navy);">Get In Touch</h2>
-            <p style="text-align: center; margin-bottom: 30px; color: #64748b;">Select the specific AlphaOrbit division
-                you want to reach, and our specialized team will contact you shortly.</p>
-
-            <form id="contactForm" class="alpha-form">
-                <div class="form-group">
-                    <label for="fullName">Full Name / Corporate Name</label>
-                    <input type="text" id="fullName" required placeholder="John Doe or Company Ltd">
+    <section class="proof-section" aria-labelledby="proof-heading">
+        <div class="section-head-center">
+            <p class="eyebrow">Client Voices</p>
+            <h2 class="section-title" id="proof-heading">Trusted by Partners Worldwide</h2>
+            <div class="divider-bar" aria-hidden="true"></div>
+            <p class="section-sub">Hear directly from the businesses and institutions that rely on AlphaOrbit Worldwide
+                every day.</p>
+        </div>
+        <div class="testi-grid">
+            <div class="testi-card">
+                <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+                <blockquote>AlphaOrbit delivered our frozen seafood consignment to Rotterdam on schedule and in perfect
+                    cold-chain condition. Their documentation and customs clearance was flawless — we've made them our
+                    permanent logistics partner.</blockquote>
+                <div class="testi-author">
+                    <div class="t-avatar" aria-hidden="true">DV</div>
+                    <div>
+                        <p class="t-name">Dirk Vanderberg</p>
+                        <p class="t-role">Procurement Director, NordFresh BV — Netherlands</p>
+                    </div>
                 </div>
-
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" required placeholder="you@company.com">
+            </div>
+            <div class="testi-card">
+                <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+                <blockquote>The hardwood charcoal specifications exceeded our industrial requirements. Fixed carbon
+                    above 78%, zero sparks, and branded packaging our retail clients love. AlphaOrbit understands
+                    quality at scale.</blockquote>
+                <div class="testi-author">
+                    <div class="t-avatar" aria-hidden="true">AT</div>
+                    <div>
+                        <p class="t-name">Ahmed Al-Tayeb</p>
+                        <p class="t-role">CEO, Gulf Hospitality Supplies — UAE</p>
+                    </div>
                 </div>
-
-                <div class="form-group">
-                    <label for="department">Select Department / Service</label>
-                    <select id="department" required onchange="handleDepartmentChange()">
-                        <option value="" disabled selected>-- Choose a Division --</option>
-                        <option value="agro">🌾 Agro-Commodities & Seafood Export</option>
-                        <option value="charcoal">🔥 Sustainable Energy (Hardwood Charcoal)</option>
-                        <option value="fashion">🪡 Fashion & Accessories</option>
-                        <option value="logistics">⚓ Global Logistics & Freight</option>
-                        <option value="caregiver">🤝 Caregiver Contracting & Consultancy</option>
-                    </select>
+            </div>
+            <div class="testi-card">
+                <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+                <blockquote>We needed 12 verified contract caregivers placed across our UK eldercare facilities within
+                    30 days. AlphaOrbit delivered 14 — all fully credentialled and compliant. Exceptional HR
+                    consultancy.</blockquote>
+                <div class="testi-author">
+                    <div class="t-avatar" aria-hidden="true">SW</div>
+                    <div>
+                        <p class="t-name">Sandra Whitmore</p>
+                        <p class="t-role">Operations Manager, CareFirst Group — United Kingdom</p>
+                    </div>
                 </div>
-
-                <!-- Dynamic field container toggled on/off by the script -->
-                <div id="dynamicContainer" class="form-group" style="display: none;">
-                    <label id="dynamicLabel" for="dynamicInput">Extra Detail</label>
-                    <input type="text" id="dynamicInput">
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Your Message</label>
-                    <textarea id="message" rows="5" required
-                        placeholder="Describe your corporate requirements..."></textarea>
-                </div>
-
-                <button type="submit" class="btn-gold" style="width: 100%; margin-top: 10px;">Submit Inquiry</button>
-            </form>
+            </div>
         </div>
     </section>
 
-    <!-- Unified Corporate Communication Footer -->
-    <footer class="footer-info">
-        <p style="margin-bottom: 12px; font-weight: 700; font-size: 1.2rem; letter-spacing: 0.5px;">AlphaOrbit Worldwide
-            Ltd</p>
-        <p style="color: #cbd5e1; margin-bottom: 8px; font-size: 0.95rem;">
-            📧 Corporate Mail: <a href="mailto:info@alphaorbitglobal.com">info@alphaorbitglobal.com</a>
-        </p>
-        <p style="color: #cbd5e1; margin-bottom: 24px; font-size: 0.95rem;">
-            📞 Secure Phone Line: <a href="tel:+2347066151787">+234 706 615 1787</a>
-        </p>
-        <p style="font-size: 0.85rem; color: #94a3b8;">&copy; 2026 AlphaOrbit Worldwide Ltd. All rights reserved.</p>
+    <section class="contact-section" id="contact" aria-labelledby="contact-heading">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <p class="eyebrow">Get In Touch</p>
+                <h2 id="contact-heading">Ready to Trade With AlphaOrbit?</h2>
+                <p>Select your division of interest and our specialist team will respond within one business day. We
+                    handle B2B enquiries at every scale.</p>
+                <div class="c-details">
+                    <div class="c-item">
+                        <div class="c-icon" aria-hidden="true"><i class="ti ti-mail"></i></div>
+                        <div>
+                            <p class="c-lbl">Corporate Email</p>
+                            <p class="c-val"><a href="mailto:info@alphaorbitglobal.com">info@alphaorbitglobal.com</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="c-item">
+                        <div class="c-icon" aria-hidden="true"><i class="ti ti-phone"></i></div>
+                        <div>
+                            <p class="c-lbl">Secure Phone Line</p>
+                            <p class="c-val"><a href="tel:+2347066151787">+234 706 615 1787</a></p>
+                        </div>
+                    </div>
+                    <div class="c-item">
+                        <div class="c-icon" aria-hidden="true"><i class="ti ti-map-pin"></i></div>
+                        <div>
+                            <p class="c-lbl">Headquarters</p>
+                            <p class="c-val">Port Harcourt, Rivers State, Nigeria</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-wrap" role="region" aria-label="Inquiry form">
+                <form id="contactForm" novalidate>
+                    <div class="form-row-2">
+                        <div class="form-group">
+                            <label for="fullName">Full Name / Company<span class="req"
+                                    aria-hidden="true">*</span></label>
+                            <input type="text" id="fullName" name="fullName" required
+                                placeholder="John Doe or Company Ltd">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address<span class="req" aria-hidden="true">*</span></label>
+                            <input type="email" id="email" name="email" required placeholder="you@company.com">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone / WhatsApp</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+1 234 567 8900">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="department">Division of Interest<span class="req"
+                                aria-hidden="true">*</span></label>
+                        <select id="department" name="department" required>
+                            <option value="" disabled selected>-- Choose a Division --</option>
+                            <option value="agro">🌾 Agro-Commodities &amp; Seafood Export</option>
+                            <option value="charcoal">🔥 Sustainable Energy (Hardwood Charcoal)</option>
+                            <option value="fashion">🪡 Fashion, Apparel &amp; Textile Logistics</option>
+                            <option value="logistics">⚓ Global Logistics &amp; Trade Fulfillment</option>
+                            <option value="caregiver">🤝 Caregiver Contracting &amp; HR Consultancy</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" id="dynamicContainer">
+                        <label id="dynamicLabel" for="dynamicInput">Additional Detail<span class="req"
+                                aria-hidden="true">*</span></label>
+                        <input type="text" id="dynamicInput" name="dynamicDetail">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message<span class="req" aria-hidden="true">*</span></label>
+                        <textarea id="message" name="message" required
+                            placeholder="Describe your requirements..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-gold btn-submit">
+                        <i class="ti ti-send" aria-hidden="true"></i> Send Inquiry
+                    </button>
+                    <div id="form-msg" role="alert" aria-live="polite"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo-link" style="margin-bottom:14px;">
+                    <img src="assets/1000151666.jpg" alt="AlphaOrbit Worldwide Ltd logo" class="logo-img" width="40"
+                        height="40">
+                    <div class="logo-wordmark">
+                        <span class="brand">ALPHA<em>ORBIT</em></span>
+                        <span class="sub">Worldwide</span>
+                    </div>
+                </a>
+                <p class="f-brand-desc">A Nigerian-based multinational delivering end-to-end trade solutions across five
+                    global sectors with integrity and precision.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Divisions</h4>
+                <ul>
+                    <li><a href="#divisions">Agro-Commodities</a></li>
+                    <li><a href="#divisions">Sustainable Energy</a></li>
+                    <li><a href="#divisions">Fashion &amp; Apparel</a></li>
+                    <li><a href="#divisions">Global Logistics</a></li>
+                    <li><a href="#divisions">Caregiver Staffing</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto:info@alphaorbitglobal.com">info@alphaorbitglobal.com</a></li>
+                    <li><a href="tel:+2347066151787">+234 706 615 1787</a></li>
+                    <li>Port Harcourt, Nigeria</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 AlphaOrbit Worldwide Ltd. All rights reserved.</p>
+        </div>
     </footer>
 
-    <!-- Interactive Interface Operations Logic -->
+    <button id="btt" aria-label="Back to top"><i class="ti ti-arrow-up" aria-hidden="true"></i></button>
+
     <script>
-        function handleDepartmentChange() {
-            const dept = document.getElementById('department').value;
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileNav = document.getElementById('mobileNav');
+        menuBtn.addEventListener('click', () => {
+            const open = mobileNav.classList.toggle('open');
+            menuBtn.classList.toggle('open', open);
+            menuBtn.setAttribute('aria-expanded', open);
+            document.body.style.overflow = open ? 'hidden' : '';
+        });
+        function closeMobile() {
+            mobileNav.classList.remove('open');
+            menuBtn.classList.remove('open');
+            menuBtn.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        }
+
+        const btt = document.getElementById('btt');
+        window.addEventListener('scroll', () => {
+            btt.classList.toggle('show', window.scrollY > 400);
+        }, { passive: true });
+        btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        const deptMap = {
+            agro: { label: 'Estimated Volume & Destination Port', ph: 'e.g., 2 FCL containers to Rotterdam' },
+            charcoal: { label: 'Order Volume & Packaging Preference', ph: 'e.g., 10 tonnes, 20kg branded bags' },
+            fashion: { label: 'Estimated Order Volume & Destination', ph: 'e.g., 500 units, GOH to London' },
+            logistics: { label: 'Cargo Type & Shipment Origin', ph: 'e.g., Perishable seafood from Lagos Port' },
+            caregiver: { label: 'Hiring or Seeking Contracts?', ph: 'e.g., Sourcing 10 contract caregivers for UK' },
+        };
+        document.getElementById('department').addEventListener('change', function () {
+            const map = deptMap[this.value];
             const container = document.getElementById('dynamicContainer');
             const label = document.getElementById('dynamicLabel');
             const input = document.getElementById('dynamicInput');
-
-            container.style.display = "block";
-
-            if (dept === 'agro' || dept === 'charcoal' || dept === 'fashion') {
-                label.innerText = "Estimated Order Volume / Destination Port";
-                input.placeholder = "e.g., 2 Containers to Port of Rotterdam";
-            } else if (dept === 'logistics') {
-                label.innerText = "Type of Cargo & Shipment Origin";
-                input.placeholder = "e.g., Perishable Seafood from Lagos Port";
-            } else if (dept === 'caregiver') {
-                label.innerText = "Are you hiring or looking for contracts?";
-                input.placeholder = "e.g., Looking to source 10 contract caregivers";
+            if (map) {
+                label.firstChild.textContent = map.label;
+                input.placeholder = map.ph;
+                container.style.display = 'block';
             } else {
-                container.style.display = "none";
+                container.style.display = 'none';
             }
-        }
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const form = this;
+            const btn = form.querySelector('.btn-submit');
+            const msg = document.getElementById('form-msg');
+
+            const name = document.getElementById('fullName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const dept = document.getElementById('department').value;
+            const message = document.getElementById('message').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const dynamicDetail = document.getElementById('dynamicInput').value.trim();
+
+            if (!name || !email || !dept || !message) {
+                msg.className = 'error';
+                msg.textContent = 'Please fill in all required fields before submitting.';
+                return;
+            }
+
+            btn.disabled = true;
+            btn.innerHTML = '<i class="ti ti-loader-2" style="animation:spin 1s linear infinite; display:inline-block;"></i> Sending…';
+            msg.style.display = 'none';
+
+            const formData = new FormData();
+            formData.append('Client Name', name);
+            formData.append('Reply-To Email', email);
+            formData.append('Phone / WhatsApp', phone);
+            formData.append('Target Division', deptMap[dept] ? deptMap[dept].label.split('&')[0].trim() : dept);
+            formData.append('Division Specific Details', dynamicDetail);
+            formData.append('Inquiry Details', message);
+
+            fetch('https://formspree.io/f/xoqgkgpw', {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            })
+                .then(response => {
+                    if (response.ok) {
+                        msg.className = 'success';
+                        msg.textContent = '✓ Inquiry successfully submitted! Our trade specialists will contact you within one business day.';
+                        form.reset();
+                        document.getElementById('dynamicContainer').style.display = 'none';
+                    } else {
+                        throw new Error('Formspree secure transmission fault.');
+                    }
+                })
+                .catch(error => {
+                    msg.className = 'error';
+                    msg.textContent = '❌ Submission error: ' + error.message;
+                })
+                .finally(() => {
+                    btn.disabled = false;
+                    btn.innerHTML = '<i class="ti ti-send"></i> Send Inquiry';
+                });
+        });
     </script>
 </body>
 
