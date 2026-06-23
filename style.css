@@ -1,36 +1,33 @@
 /* ==========================================================================
-   01. GLOBAL VARIABLES & SYSTEM TOKENS
+   01. GLOBAL VARIABLES & BRAND PARAMETERS
    ========================================================================== */
 :root {
-    /* Premium Corporate Slate and Platinum Base Palette */
     --bg-primary: #0f172a;
-    /* Deep Slate Abyss */
+    /* Deep Navy Slate */
     --bg-secondary: #1e293b;
-    /* Mid-tone Slate Shield */
+    /* Secondary Container Dark Slate */
     --bg-light: #f8fafc;
-    /* Soft Off-White Background */
+    /* Soft Platinum Light Page Surface */
     --text-dark: #0f172a;
-    /* Body Text Contrast Dark */
+    /* Text Contrast Primary */
     --text-muted: #64748b;
-    /* Clean Gray Captions */
+    /* Elegant Secondary Copy Gray */
     --text-light: #f1f5f9;
-    /* Pure Contrast White Text */
+    /* Pure Contrast White Copy */
 
-    /* Luxury Gold Gradient Highlights */
-    --gold-primary: #d4af37;
-    /* Metallic Luxury Gold Accent */
-    --gold-hover: #f3e5ab;
-    /* Smooth Light Wheat Highlight */
-    --gold-grad: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
+    /* Brand Luxury Accents */
+    --gold-primary: #e5b842;
+    /* Master Gold Highlight */
+    --gold-grad: linear-gradient(135deg, #f3d06c 0%, #e5b842 50%, #c59628 100%);
 
-    /* Structural Tokens */
+    /* UI Layout Blocks */
     --max-width: 1200px;
     --radius-m: 8px;
     --radius-l: 16px;
     --shadow-m: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-g: 0 10px 25px -5px rgba(191, 149, 63, 0.2), 0 8px 10px -6px rgba(191, 149, 63, 0.2);
-    --font-body: 'Montserrat', sans-serif;
-    --font-header: 'Cinzel', serif;
+    --shadow-g: 0 10px 25px -5px rgba(229, 184, 66, 0.2);
+    --font-body: 'Inter', sans-serif;
+    --font-header: 'Playfair Display', serif;
 }
 
 /* ==========================================================================
@@ -69,7 +66,6 @@ ul {
     list-style: none;
 }
 
-/* Structural Container */
 .container {
     width: 100%;
     max-width: var(--max-width);
@@ -78,14 +74,14 @@ ul {
 }
 
 /* ==========================================================================
-   03. BUTTON UTILITY PARAMS
+   03. BUTTON UTILITIES
    ========================================================================== */
 .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: 14px 28px;
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -98,12 +94,12 @@ ul {
 .btn-primary {
     background: var(--gold-grad);
     color: #000;
-    box-shadow: 0 4px 12px rgba(191, 149, 63, 0.3);
+    box-shadow: 0 4px 12px rgba(229, 184, 66, 0.3);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(191, 149, 63, 0.5);
+    box-shadow: 0 6px 20px rgba(229, 184, 66, 0.5);
 }
 
 .btn-outline {
@@ -124,14 +120,14 @@ ul {
 }
 
 /* ==========================================================================
-   04. TOP BRANDING RIBBON
+   04. TOP INFO RIBBON
    ========================================================================== */
 .top-bar {
     background-color: #090d16;
     color: var(--text-light);
     font-size: 0.75rem;
     padding: 10px 0;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+    border-bottom: 1px solid rgba(229, 184, 66, 0.15);
 }
 
 .bar-content {
@@ -175,7 +171,7 @@ ul {
 }
 
 /* ==========================================================================
-   05. MAIN NAVIGATION HEADER
+   05. NAVIGATION HEADER CONTROL
    ========================================================================== */
 .main-header {
     background-color: rgba(15, 23, 42, 0.95);
@@ -210,18 +206,18 @@ ul {
 }
 
 .brand-primary {
-    font-family: var(--font-header);
+    font-family: var(--font-body);
     color: #fff;
-    font-size: 1.4rem;
-    font-weight: 700;
-    letter-spacing: 2px;
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
     line-height: 1.1;
 }
 
 .brand-sub {
     color: var(--gold-primary);
     font-size: 0.65rem;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     font-weight: 600;
 }
 
@@ -286,16 +282,15 @@ ul {
 }
 
 /* ==========================================================================
-   06. HERO SECTION VISUAL BLOCK
+   06. HERO HEADER BLOCK
    ========================================================================== */
 .hero-section {
     position: relative;
-    /* Stock global trading container ship visual reference */
     background-image: url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1920&q=80');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    min-height: 85vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     color: #fff;
@@ -307,20 +302,20 @@ ul {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgba(15, 23, 42, 0.95) 40%, rgba(15, 23, 42, 0.4) 100%);
+    background: linear-gradient(to right, rgba(15, 23, 42, 0.95) 45%, rgba(15, 23, 42, 0.5) 100%);
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 700px;
+    max-width: 750px;
 }
 
 .hero-badge {
     display: inline-block;
     color: var(--gold-primary);
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    background-color: rgba(212, 175, 55, 0.05);
+    border: 1px solid rgba(229, 184, 66, 0.3);
+    background-color: rgba(229, 184, 66, 0.05);
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -332,17 +327,16 @@ ul {
 
 .hero-content h1 {
     font-family: var(--font-header);
-    font-size: 3rem;
+    font-size: 3.2rem;
     line-height: 1.15;
     margin-bottom: 20px;
-    font-weight: 700;
 }
 
 .hero-content p {
     color: #cbd5e1;
     font-size: 1.1rem;
     margin-bottom: 36px;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .hero-actions {
@@ -351,7 +345,7 @@ ul {
 }
 
 /* ==========================================================================
-   07. GLOBAL SECTION HEADERS UTILITY
+   07. SECTION HEADERS
    ========================================================================== */
 .section-header {
     text-align: center;
@@ -361,7 +355,7 @@ ul {
 
 .section-header h2 {
     font-family: var(--font-header);
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     color: var(--bg-primary);
     margin-bottom: 16px;
     position: relative;
@@ -385,7 +379,7 @@ ul {
 }
 
 /* ==========================================================================
-   08. ABOUT SYSTEM & FEATURES GRID
+   08. ABOUT CARDS STRIP
    ========================================================================== */
 .about-section {
     padding: 100px 0;
@@ -421,20 +415,20 @@ ul {
 }
 
 .about-card h3 {
-    font-family: var(--font-header);
-    font-size: 1.15rem;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 1.2rem;
     margin-bottom: 14px;
     color: var(--bg-primary);
 }
 
 .about-card p {
     color: var(--text-muted);
-    font-size: 0.88rem;
-    line-height: 1.6;
+    font-size: 0.9rem;
 }
 
 /* ==========================================================================
-   09. DIVERSIFIED DIVISIONS LAYOUT AREA
+   09. DIVERSIFIED DIVISIONS GRID DESK (ALL 5 SYSTEMS)
    ========================================================================== */
 .divisions-section {
     padding: 100px 0;
@@ -446,7 +440,7 @@ ul {
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
-    margin-bottom: 80px;
+    margin-bottom: 100px;
 }
 
 .div-row:last-child {
@@ -458,19 +452,19 @@ ul {
 }
 
 .div-num {
-    font-family: var(--font-header);
-    font-size: 4rem;
-    font-weight: 700;
-    color: rgba(15, 23, 42, 0.05);
+    font-family: var(--font-body);
+    font-weight: 800;
+    font-size: 4.5rem;
+    color: rgba(15, 23, 42, 0.04);
     position: absolute;
-    top: -40px;
+    top: -45px;
     left: 0;
     z-index: 1;
 }
 
 .div-text h3 {
     font-family: var(--font-header);
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     color: var(--bg-primary);
     margin-bottom: 20px;
     position: relative;
@@ -506,17 +500,25 @@ ul {
     background-position: center;
 }
 
-/* Row Background Assignments from Unsplash Assets */
-.div-freight {
-    background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80');
-}
-
+/* Image Assets Matching Your Distinct Fields */
 .div-agro {
     background-image: url('https://images.unsplash.com/photo-1595275313331-5a0336ae2936?auto=format&fit=crop&w=800&q=80');
 }
 
 .div-energy {
-    background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80');
+    background-image: url('https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=800&q=80');
+}
+
+.div-fashion {
+    background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80');
+}
+
+.div-freight {
+    background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80');
+}
+
+.div-healthcare {
+    background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80');
 }
 
 .div-row.reverse .div-text {
@@ -529,62 +531,12 @@ ul {
 }
 
 /* ==========================================================================
-   10. SYSTEM CALL TO ACTIONS & STATEMENTS
-   ========================================================================== */
-blockquote {
-    border-left: 4px solid var(--gold-primary);
-    padding: 16px 24px;
-    background-color: var(--bg-light);
-    font-style: italic;
-    font-size: 1.05rem;
-    color: var(--bg-primary);
-    margin: 30px 0;
-    border-radius: 0 var(--radius-m) var(--radius-m) 0;
-}
-
-/* ==========================================================================
-   11. DATA ARRAYS COMPARISON TABLES UTILITIES
-   ========================================================================== */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 24px 0;
-    font-size: 0.9rem;
-    box-shadow: var(--shadow-m);
-    border-radius: var(--radius-m);
-    overflow: hidden;
-}
-
-th {
-    background-color: var(--bg-primary);
-    color: #fff;
-    text-align: left;
-    padding: 14px 18px;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 0.5px;
-}
-
-td {
-    padding: 14px 18px;
-    border-bottom: 1px solid #e2e8f0;
-    background-color: #fff;
-    color: #334155;
-}
-
-tr:last-child td {
-    border-bottom: none;
-}
-
-/* ==========================================================================
-   12. SECURE FORM PARTNERSHIP WRAPPER
+   10. INQUIRY ENGINE WRAPPER
    ========================================================================== */
 .contact-section {
     padding: 100px 0;
     background-color: var(--bg-primary);
     color: #fff;
-    position: relative;
 }
 
 .contact-grid {
@@ -596,14 +548,14 @@ tr:last-child td {
 
 .contact-info h2 {
     font-family: var(--font-header);
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     line-height: 1.2;
     margin-bottom: 20px;
 }
 
 .contact-info p {
     color: #cbd5e1;
-    font-size: 0.95rem;
+    font-size: 0.98rem;
     margin-bottom: 40px;
 }
 
@@ -620,7 +572,7 @@ tr:last-child td {
 }
 
 .c-icon {
-    background-color: rgba(214, 175, 55, 0.1);
+    background-color: rgba(229, 184, 66, 0.1);
     color: var(--gold-primary);
     width: 44px;
     height: 44px;
@@ -649,7 +601,7 @@ tr:last-child td {
     color: var(--gold-primary);
 }
 
-/* Form Panel Card Container styling */
+/* Form Card Setup */
 .contact-card-form {
     background-color: var(--bg-secondary);
     padding: 40px;
@@ -697,15 +649,14 @@ tr:last-child td {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--gold-primary);
-    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+    box-shadow: 0 0 0 3px rgba(229, 184, 66, 0.15);
 }
 
 .form-group select option {
     background-color: var(--bg-secondary);
-    color: #fff;
 }
 
-/* AJAX Processing Status Box */
+/* Status Notifications */
 .form-status-msg {
     margin-top: 16px;
     padding: 12px;
@@ -730,7 +681,7 @@ tr:last-child td {
 }
 
 /* ==========================================================================
-   13. FOOTER SIGN-OFF CORE BLOCK
+   11. FOOTER AREA
    ========================================================================== */
 .main-footer {
     background-color: #090d16;
@@ -755,10 +706,10 @@ tr:last-child td {
 }
 
 .f-brand h4 {
-    font-family: var(--font-header);
+    font-family: var(--font-body);
+    font-weight: 800;
     color: #fff;
     font-size: 1.2rem;
-    letter-spacing: 1px;
     line-height: 1.1;
 }
 
@@ -784,22 +735,19 @@ tr:last-child td {
 
 .f-subtext {
     font-size: 0.75rem;
-    color: var(--text-muted);
+    color: #475569;
 }
 
 /* ==========================================================================
-   14. FLOATING INTERACTION TRIGGERS (WHATSAPP & BACK TO TOP)
+   12. FLOATING TRIGGERS (WHATSAPP & SCROLL ARROW)
    ========================================================================== */
-/* WhatsApp Floating Button Base */
 .whatsapp-float {
     position: fixed;
     bottom: 26px;
     right: 26px;
-    /* Pinned securely in the bottom-right corner */
     width: 56px;
     height: 56px;
     background-color: #25d366;
-    /* Official WhatsApp Green */
     color: #fff;
     border-radius: 50%;
     display: flex;
@@ -816,7 +764,6 @@ tr:last-child td {
     box-shadow: 0 8px 24px rgba(37, 211, 102, 0.6);
 }
 
-/* Hover Tooltip Text */
 .wa-tooltip {
     position: absolute;
     right: 70px;
@@ -830,18 +777,16 @@ tr:last-child td {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.2s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .whatsapp-float:hover .wa-tooltip {
     opacity: 1;
 }
 
-/* Back to Top Button (Shifted up slightly so it sits right above WhatsApp) */
 #btt {
     position: fixed;
     bottom: 96px;
-    /* Higher placement so it sits on top of the green chat bubble */
+    /* Stacked right above WhatsApp bubble */
     right: 26px;
     width: 44px;
     height: 44px;
@@ -870,11 +815,11 @@ tr:last-child td {
 }
 
 /* ==========================================================================
-   15. ADAPTIVE RESPONSIVE MEDIA BREAKPOINTS
+   13. MEDIA RESPONSIVE MEDIA BREAKPOINTS
    ========================================================================== */
 @media (max-width: 992px) {
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 2.6rem;
     }
 
     .about-grid {
@@ -940,7 +885,7 @@ tr:last-child td {
     }
 
     .hero-section {
-        min-height: 70vh;
+        min-height: 65vh;
         padding: 60px 0;
     }
 
@@ -975,7 +920,6 @@ tr:last-child td {
         text-align: left;
     }
 
-    /* Compact layout modifications for small screens */
     .whatsapp-float {
         width: 50px;
         height: 50px;
@@ -994,6 +938,4 @@ tr:last-child td {
     .wa-tooltip {
         display: none;
     }
-
-    /* Disabled on mobile targets */
 }
