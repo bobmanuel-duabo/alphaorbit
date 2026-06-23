@@ -36,8 +36,8 @@
             <div class="bar-left">
                 <span><i class="ti ti-map-pin"></i> Global Enterprise Operations</span>
                 <span class="sep">|</span>
-                <span><i class="ti ti-mail"></i> <a
-                        href="mailto:info@alphaorbitglobal.com">info@alphaorbitglobal.com</a></span>
+                <span><i class="ti ti-mail"></i>
+                    href="mailto:info@alphaorbitglobal.com">info@alphaorbitglobal.com</a></span>
             </div>
             <div class="bar-right">
                 <a href="https://wa.me/2347066151787" target="_blank" rel="noopener noreferrer"><i
@@ -179,7 +179,7 @@
                     <span class="div-num">04</span>
                     <h3>Global Freight & Intermodal Logistics</h3>
                     <p>We solve difficult cross-border supply challenges by engineering optimized transit routing
-                        models. From maritime ocean carriers to urgent air cargo options and final drop drops,
+                        models. From maritime ocean carriers to urgent air freight options and final-mile delivery,
                         AlphaOrbit guards bulk corporate investments seamlessly.</p>
                     <ul class="div-list">
                         <li><i class="ti ti-circle-check"></i> Quick Customs Clearance Processing Links</li>
@@ -231,8 +231,8 @@
                             <div class="c-icon" aria-hidden="true"><i class="ti ti-mail"></i></div>
                             <div>
                                 <p class="c-lbl">Corporate Intake Email Address</p>
-                                <p class="c-val"><a
-                                        href="mailto:info@alphaorbitglobal.com">info@alphaorbitglobal.com</a></p>
+                                <p class="c-val">
+                                    href="mailto:info@alphaorbitglobal.com">info@alphaorbitglobal.com</a></p>
                             </div>
                         </div>
                         <div class="c-item">
@@ -247,12 +247,12 @@
                 </div>
 
                 <div class="contact-card-form">
-                    <form id="contactForm" action="https://formspree.io/f/xvggpzee" method="POST">
+                    <form id="contactForm" action="https://formspree.io/f/xvggpzee" method="POST" novalidate>
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="clientName">Full Name / Representative</label>
                                 <input type="text" id="clientName" name="name" required
-                                    placeholder="e.g., D.F Bobmanuel">
+                                    placeholder="e.g., John Adeyemi">
                             </div>
                             <div class="form-group">
                                 <label for="clientEmail">Corporate Email Address</label>
@@ -379,7 +379,7 @@
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             formSubmitBtn.disabled = true;
-            formSubmitBtn.innerText = "Processing Data...";
+            formSubmitBtn.innerText = "Submitting…";
             formStatus.className = "form-status-msg";
             formStatus.innerText = "";
 
@@ -403,7 +403,7 @@
                 }
             } catch (error) {
                 formStatus.className = "form-status-msg error";
-                formStatus.innerText = "Network pipeline error. Please check your internet connection.";
+                formStatus.innerText = "Network error. Please check your connection and try again.";
             } finally {
                 formSubmitBtn.disabled = false;
                 formSubmitBtn.innerText = "Send Inquiry";
