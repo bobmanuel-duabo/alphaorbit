@@ -304,7 +304,7 @@ ul {
     color: #fff;
 }
 
-/* Parallax only on pointer-fine devices (no iOS/Android bug) */
+/* Parallax fallback fine-pointer control */
 @media (pointer: fine) {
     .hero-section {
         background-attachment: fixed;
@@ -528,12 +528,14 @@ ul {
     background-position: center;
 }
 
+/* --- Tailored Visual Background Links --- */
 .div-agro {
     background-image: url('https://images.unsplash.com/photo-1534482421-64566f976cfa?auto=format&fit=crop&w=800&q=80');
 }
 
+/* Raw hardwood charcoal chunks & active carbon embers */
 .div-energy {
-    background-image: url('https://images.unsplash.com/photo-1608686207856-001b95cf60ca?auto=format&fit=crop&w=800&q=80');
+    background-image: url('https://images.unsplash.com/photo-1524222032545-2b47e2b86121?auto=format&fit=crop&w=800&q=80');
 }
 
 .div-fashion {
@@ -544,8 +546,9 @@ ul {
     background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80');
 }
 
+/* Black Caregiver with an elderly White client representation */
 .div-healthcare {
-    background-image: url('https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=800&q=80');
+    background-image: url('https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=800&q=80');
 }
 
 /* ==========================================================================
