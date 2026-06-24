@@ -3,13 +3,24 @@
    ========================================================================== */
 :root {
     --bg-primary: #07153a;
+    /* Deep Royal Corporate Blue from Logo */
     --bg-secondary: #1e293b;
+    /* Secondary Container Dark Slate */
     --bg-light: #f8fafc;
+    /* Soft Platinum Light Page Surface */
     --text-dark: #0f172a;
+    /* Text Contrast Primary */
     --text-muted: #64748b;
+    /* Elegant Secondary Copy Gray */
     --text-light: #f1f5f9;
+    /* Pure Contrast White Copy */
+
+    /* Brand Luxury Accents */
     --gold-primary: #e5b842;
+    /* Master Gold Highlight */
     --gold-grad: linear-gradient(135deg, #f3d06c 0%, #e5b842 50%, #c59628 100%);
+
+    /* UI Layout Blocks */
     --max-width: 1200px;
     --radius-m: 8px;
     --radius-l: 16px;
@@ -20,7 +31,7 @@
 }
 
 /* ==========================================================================
-   02. BASE RESET
+   02. BASE CORE RESET STYLES
    ========================================================================== */
 * {
     box-sizing: border-box;
@@ -164,7 +175,7 @@ ul {
 }
 
 /* ==========================================================================
-   05. NAVIGATION HEADER
+   05. NAVIGATION HEADER CONTROL
    ========================================================================== */
 .main-header {
     background-color: rgba(7, 21, 58, 0.96);
@@ -281,7 +292,7 @@ ul {
 }
 
 /* ==========================================================================
-   06. HERO SECTION
+   06. HERO HEADER BLOCK
    ========================================================================== */
 .hero-section {
     position: relative;
@@ -295,7 +306,6 @@ ul {
     color: #fff;
 }
 
-/* Parallax only on desktop/mouse devices — avoids iOS Safari bug */
 @media (pointer: fine) {
     .hero-section {
         background-attachment: fixed;
@@ -385,7 +395,7 @@ ul {
 }
 
 /* ==========================================================================
-   08. ABOUT CARDS
+   08. ABOUT CARDS STRIP
    ========================================================================== */
 .about-section {
     padding: 100px 0;
@@ -434,7 +444,7 @@ ul {
 }
 
 /* ==========================================================================
-   09. DIVISIONS GRID
+   09. DIVERSIFIED DIVISIONS GRID
    ========================================================================== */
 .divisions-section {
     padding: 100px 0;
@@ -519,12 +529,13 @@ ul {
     background-position: center;
 }
 
+/* Specific division imagery backgrounds */
 .div-agro {
     background-image: url('https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=800&q=80');
 }
 
 .div-energy {
-    background-image: url('https://images.unsplash.com/photo-1621464714151-6c1724032dbe?auto=format&fit=crop&w=800&q=80');
+    background-image: url('https://images.unsplash.com/photo-1549221536-53cd2516a9a2?auto=format&fit=crop&w=800&q=80');
 }
 
 .div-fashion {
@@ -540,7 +551,7 @@ ul {
 }
 
 /* ==========================================================================
-   10. CONTACT SECTION
+   10. INQUIRY ENGINE WRAPPER
    ========================================================================== */
 .contact-section {
     padding: 100px 0;
@@ -701,7 +712,7 @@ ul {
 }
 
 /* ==========================================================================
-   11. FOOTER
+   11. FOOTER AREA
    ========================================================================== */
 .main-footer {
     background-color: #040d24;
@@ -759,7 +770,7 @@ ul {
 }
 
 /* ==========================================================================
-   12. FLOATING BUTTONS (WHATSAPP & SCROLL TO TOP)
+   12. FLOATING TRIGGERS (WHATSAPP & SCROLL ARROW)
    ========================================================================== */
 .whatsapp-float {
     position: fixed;
@@ -834,7 +845,7 @@ ul {
 }
 
 /* ==========================================================================
-   13. RESPONSIVE BREAKPOINTS
+   13. RESPONSIVE MEDIA BREAKPOINTS
    ========================================================================== */
 @media (max-width: 992px) {
     .hero-content h1 {
