@@ -3,24 +3,13 @@
    ========================================================================== */
 :root {
     --bg-primary: #07153a;
-    /* Deep Royal Corporate Blue from Logo */
     --bg-secondary: #1e293b;
-    /* Secondary Container Dark Slate */
     --bg-light: #f8fafc;
-    /* Soft Platinum Light Page Surface */
     --text-dark: #0f172a;
-    /* Text Contrast Primary */
     --text-muted: #64748b;
-    /* Elegant Secondary Copy Gray */
     --text-light: #f1f5f9;
-    /* Pure Contrast White Copy */
-
-    /* Brand Luxury Accents */
     --gold-primary: #e5b842;
-    /* Master Gold Highlight */
     --gold-grad: linear-gradient(135deg, #f3d06c 0%, #e5b842 50%, #c59628 100%);
-
-    /* UI Layout Blocks */
     --max-width: 1200px;
     --radius-m: 8px;
     --radius-l: 16px;
@@ -31,7 +20,7 @@
 }
 
 /* ==========================================================================
-   02. BASE CORE RESET STYLES
+   02. BASE RESET
    ========================================================================== */
 * {
     box-sizing: border-box;
@@ -175,11 +164,10 @@ ul {
 }
 
 /* ==========================================================================
-   05. NAVIGATION HEADER CONTROL
+   05. NAVIGATION HEADER
    ========================================================================== */
 .main-header {
     background-color: rgba(7, 21, 58, 0.96);
-    /* Exact royal blue match from logo background */
     position: sticky;
     top: 0;
     z-index: 999;
@@ -293,7 +281,7 @@ ul {
 }
 
 /* ==========================================================================
-   06. HERO HEADER BLOCK
+   06. HERO SECTION
    ========================================================================== */
 .hero-section {
     position: relative;
@@ -307,7 +295,7 @@ ul {
     color: #fff;
 }
 
-/* Parallax only on pointer-fine devices */
+/* Parallax only on desktop/mouse devices — avoids iOS Safari bug */
 @media (pointer: fine) {
     .hero-section {
         background-attachment: fixed;
@@ -397,7 +385,7 @@ ul {
 }
 
 /* ==========================================================================
-   08. ABOUT CARDS STRIP
+   08. ABOUT CARDS
    ========================================================================== */
 .about-section {
     padding: 100px 0;
@@ -446,7 +434,7 @@ ul {
 }
 
 /* ==========================================================================
-   09. DIVERSIFIED DIVISIONS GRID
+   09. DIVISIONS GRID
    ========================================================================== */
 .divisions-section {
     padding: 100px 0;
@@ -531,7 +519,6 @@ ul {
     background-position: center;
 }
 
-/* Specific production/export imagery for divisions */
 .div-agro {
     background-image: url('https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=800&q=80');
 }
@@ -553,7 +540,7 @@ ul {
 }
 
 /* ==========================================================================
-   10. INQUIRY ENGINE WRAPPER
+   10. CONTACT SECTION
    ========================================================================== */
 .contact-section {
     padding: 100px 0;
@@ -623,7 +610,6 @@ ul {
     color: var(--gold-primary);
 }
 
-/* Form Card Setup */
 .contact-card-form {
     background-color: var(--bg-secondary);
     padding: 40px;
@@ -678,7 +664,6 @@ ul {
     background-color: var(--bg-secondary);
 }
 
-/* Status Notifications */
 .form-status-msg {
     margin-top: 16px;
     padding: 12px;
@@ -716,11 +701,10 @@ ul {
 }
 
 /* ==========================================================================
-   11. FOOTER AREA
+   11. FOOTER
    ========================================================================== */
 .main-footer {
     background-color: #040d24;
-    /* Seamless matching backdrop blue background */
     color: #94a3b8;
     padding: 60px 0 30px 0;
     font-size: 0.85rem;
@@ -775,7 +759,7 @@ ul {
 }
 
 /* ==========================================================================
-   12. FLOATING TRIGGERS (WHATSAPP & SCROLL ARROW)
+   12. FLOATING BUTTONS (WHATSAPP & SCROLL TO TOP)
    ========================================================================== */
 .whatsapp-float {
     position: fixed;
@@ -850,7 +834,7 @@ ul {
 }
 
 /* ==========================================================================
-   13. RESPONSIVE MEDIA BREAKPOINTS
+   13. RESPONSIVE BREAKPOINTS
    ========================================================================== */
 @media (max-width: 992px) {
     .hero-content h1 {
