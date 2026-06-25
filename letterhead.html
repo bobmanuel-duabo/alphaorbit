@@ -36,6 +36,8 @@
             print-color-adjust: exact;
         }
 
+        bilge
+
         /* Sovereign A4 Stationary Spec */
         .letterhead-container {
             background: var(--bg-surface);
@@ -49,24 +51,6 @@
             justify-content: space-between;
             box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
             overflow: hidden;
-        }
-
-        /* 1. CENTRAL BACKGROUND EMBEDDED WATERMARK */
-        .watermark-overlay {
-            position: absolute;
-            top: 52%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 320px;
-            height: 320px;
-            background-image: url('alphaorbit logo.jpg.jpg');
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
-            opacity: 0.035;
-            /* Perfect fade baseline for typewriter clarity */
-            pointer-events: none;
-            z-index: 1;
         }
 
         /* Corner Abstract Accent */
@@ -228,10 +212,8 @@
         /* ========================================== */
         .letter-body {
             flex-grow: 1;
-            position: relative;
-            z-index: 2;
-            /* Sits above watermark but below headers */
-            margin-top: 50px;
+            margin-top: 30px;
+            margin-bottom: 30px;
         }
 
         /* ========================================== */
@@ -239,12 +221,13 @@
         /* ========================================== */
         .sign-off-panel {
             margin-top: auto;
-            padding: 24px;
+            /* Dynamically anchors signature to the absolute bottom */
+            padding: 20px 24px;
             background: linear-gradient(90deg, var(--bg-tint) 0%, transparent 100%);
             border-left: 4px solid var(--blue-prime);
             border-radius: 0 8px 8px 0;
             width: 55%;
-            margin-bottom: 35px;
+            margin-bottom: 25px;
             position: relative;
             z-index: 3;
         }
@@ -276,7 +259,7 @@
         }
 
         /* ========================================== */
-        /* FOOTER BRAND MATRIX                        */
+        /* TECHNICAL CLEAN FOOTER                     */
         /* ========================================== */
         footer {
             border-top: 1px solid #E2E8F0;
@@ -333,9 +316,6 @@
 
     <div class="letterhead-container">
 
-        <!-- MAIN BACKGROUND CREST WATERMARK -->
-        <div class="watermark-overlay"></div>
-
         <!-- HEADER MODULE -->
         <header>
             <div class="header-top">
@@ -373,7 +353,7 @@
                 <div class="strip-gold"></div>
             </div>
 
-            <!-- Enhanced Ref & Date Gold-Bordered Console -->
+            <!-- Ref & Date Tracking Box -->
             <div class="tracking-bar">
                 <div class="ref-field">
                     <span>Our Ref:</span>
@@ -386,12 +366,12 @@
             </div>
         </header>
 
-        <!-- MAIN PRINTABLE CANVAS AREA -->
+        <!-- MAIN AREA (Maximized space for letter body) -->
         <main class="letter-body">
-            <!-- Left vacant deliberately for clear print overlays or layout typing -->
+            <!-- Left vacant deliberately for printing or template typing -->
         </main>
 
-        <!-- HIGH-END SIGNATURE BLOCK -->
+        <!-- HIGH-END SIGNATURE BLOCK (Anchored to the lower frame margin) -->
         <div class="sign-off-panel">
             <p>Yours Faithfully,</p>
             <p class="company-signature-title">For: AlphaOrbit Worldwide Ltd</p>
@@ -399,7 +379,7 @@
             <strong>Authorized Signatory / Director</strong>
         </div>
 
-        <!-- ENHANCED CORPORATE DATA FOOTER -->
+        <!-- CORPORATE DATA FOOTER -->
         <footer>
             <div class="footer-left">
                 <p>&copy; 2026 <span class="footer-brand-span">AlphaOrbit Worldwide Ltd.</span> All global rights
