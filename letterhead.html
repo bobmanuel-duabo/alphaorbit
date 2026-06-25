@@ -31,18 +31,19 @@
             font-family: 'Inter', -apple-system, sans-serif;
             color: var(--text-main);
             background-color: var(--bg-canvas);
-            padding: 50px 0;
+            padding: 40px 0;
             -webkit-print-color-adjust: exact;
             print-color-adjust: exact;
         }
 
-        /* Sovereign A4 Stationary Spec */
+        /* Sovereign A4 Stationary Spec - Page Optimized */
         .letterhead-container {
             background: var(--bg-surface);
             width: 210mm;
             min-height: 297mm;
             margin: 0 auto;
-            padding: 25mm 22mm 22mm 22mm;
+            padding: 12mm 20mm 15mm 20mm;
+            /* Compact margins to guarantee 1-page printing */
             position: relative;
             display: flex;
             flex-direction: column;
@@ -78,7 +79,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-bottom: 24px;
+            padding-bottom: 12px;
+            /* Halved to compress vertical profile */
         }
 
         .brand-identity {
@@ -126,7 +128,7 @@
         .top-right-contact {
             display: flex;
             flex-direction: column;
-            gap: 7px;
+            gap: 6px;
         }
 
         .c-item-top {
@@ -172,15 +174,17 @@
         }
 
         /* ========================================== */
-        /* REF & DATE CONSOLE PANEL                   */
+        /* COMPACT REF & DATE TRACKING BOX           */
         /* ========================================== */
         .tracking-bar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 14px 18px;
+            padding: 10px 16px;
+            /* Optimized padding spacing */
             border-radius: 6px;
-            margin-top: 18px;
+            margin-top: 10px;
+            /* Tightened from 18px */
             background: var(--bg-tint);
             border: 1px solid rgba(0, 51, 153, 0.05);
             border-left: 3px solid var(--gold-prime);
@@ -206,26 +210,26 @@
         }
 
         /* ========================================== */
-        /* LETTER BODY VACANCY                        */
+        /* LETTER BODY CANVAS                         */
         /* ========================================== */
         .letter-body {
             flex-grow: 1;
-            margin-top: 30px;
-            margin-bottom: 30px;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
 
         /* ========================================== */
-        /* EXECUTIVE SIGNATURE CLOSURE                */
+        /* SIGNATURE CLOSURE PANELS                   */
         /* ========================================== */
         .sign-off-panel {
             margin-top: auto;
-            /* Pushes the signature down cleanly to the baseline */
-            padding: 20px 24px;
+            /* Forces element to remain balanced near page end */
+            padding: 16px 20px;
             background: linear-gradient(90deg, var(--bg-tint) 0%, transparent 100%);
             border-left: 4px solid var(--blue-prime);
             border-radius: 0 8px 8px 0;
             width: 55%;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             position: relative;
             z-index: 3;
         }
@@ -243,7 +247,7 @@
         }
 
         .signature-line-box {
-            margin: 35px 0 12px 0;
+            margin: 30px 0 10px 0;
             height: 1px;
             border-bottom: 1px dashed rgba(0, 51, 153, 0.3);
             width: 190px;
@@ -257,11 +261,11 @@
         }
 
         /* ========================================== */
-        /* TECHNICAL CLEAN FOOTER                     */
+        /* PRINT STABLE BASELINE FOOTER               */
         /* ========================================== */
         footer {
             border-top: 1px solid #E2E8F0;
-            padding-top: 18px;
+            padding-top: 14px;
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
@@ -302,7 +306,7 @@
 
             .letterhead-container {
                 box-shadow: none;
-                padding: 25mm 22mm 22mm 22mm;
+                padding: 12mm 20mm 15mm 20mm;
                 width: 100%;
                 height: 100%;
             }
@@ -351,11 +355,11 @@
                 <div class="strip-gold"></div>
             </div>
 
-            <!-- Ref & Date Tracking Box -->
+            <!-- Optimized Reference & Tracking Array -->
             <div class="tracking-bar">
                 <div class="ref-field">
-                    <span>Ref:</span>
-                    <span class="line-filler">____________________</span>
+                    <span>Our Ref:</span>
+                    <span class="line-filler">AO/____________________</span>
                 </div>
                 <div class="date-field">
                     <span>Date:</span>
@@ -369,7 +373,7 @@
             <!-- Left vacant deliberately for printing or template typing -->
         </main>
 
-        <!-- HIGH-END SIGNATURE BLOCK (Anchored to the lower frame margin) -->
+        <!-- HIGH-END SIGNATURE BLOCK (Safely calculated on Page 1 boundary) -->
         <div class="sign-off-panel">
             <p>Yours Faithfully,</p>
             <p class="company-signature-title">For: AlphaOrbit Worldwide Ltd</p>
