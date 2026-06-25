@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
     <style>
         :root {
-            --navy-dark: #0A192F;
-            --navy-light: #172A45;
+            --blue-primary: #003399;
+            /* Rich Royal Corporate Blue */
+            --blue-light: #E6EEFF;
             --gold-primary: #D4AF37;
             --gold-light: #F4E8C1;
             --text-dark: #1E293B;
@@ -56,7 +57,7 @@
             left: 0;
             width: 140px;
             height: 140px;
-            background: linear-gradient(135deg, rgba(10, 25, 47, 0.04) 0%, rgba(212, 175, 51, 0.02) 100%);
+            background: linear-gradient(135deg, rgba(0, 51, 153, 0.04) 0%, rgba(212, 175, 51, 0.02) 100%);
             border-bottom-right-radius: 100%;
             pointer-events: none;
         }
@@ -87,7 +88,7 @@
             background: var(--bg-light);
             padding: 6px;
             border-radius: 8px;
-            border: 1px solid rgba(10, 25, 47, 0.08);
+            border: 1px solid rgba(0, 51, 153, 0.08);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -104,7 +105,7 @@
         .brand-text h1 {
             font-size: 30px;
             font-weight: 800;
-            color: var(--navy-dark);
+            color: var(--blue-primary);
             letter-spacing: 0.75px;
             line-height: 1;
         }
@@ -131,7 +132,7 @@
             justify-content: flex-end;
             gap: 8px;
             font-size: 13px;
-            color: var(--navy-light);
+            color: var(--text-dark);
             font-weight: 500;
         }
 
@@ -141,7 +142,7 @@
         }
 
         .c-item-top i {
-            color: var(--navy-dark);
+            color: var(--blue-primary);
             font-size: 15px;
             width: 20px;
             text-align: center;
@@ -155,10 +156,10 @@
             margin-bottom: 4px;
         }
 
-        .strip-navy {
+        .strip-blue {
             width: 100%;
             height: 3px;
-            background: var(--navy-dark);
+            background: var(--blue-primary);
         }
 
         .strip-gold {
@@ -178,14 +179,14 @@
             padding: 12px 16px;
             border-radius: 6px;
             margin-top: 15px;
-            border: 1px solid rgba(10, 25, 47, 0.04);
+            border: 1px solid rgba(0, 51, 153, 0.04);
         }
 
         .ref-field,
         .date-field {
             font-size: 13px;
             font-weight: 700;
-            color: var(--navy-dark);
+            color: var(--blue-primary);
             display: flex;
             align-items: center;
             gap: 6px;
@@ -214,7 +215,7 @@
             margin-top: auto;
             padding: 24px;
             background: linear-gradient(to right, var(--bg-light), transparent);
-            border-left: 3px solid var(--navy-dark);
+            border-left: 3px solid var(--blue-primary);
             border-radius: 0 8px 8px 0;
             width: 60%;
             margin-bottom: 20px;
@@ -228,20 +229,20 @@
         .company-signature-title {
             font-size: 16px !important;
             font-weight: 700;
-            color: var(--navy-dark) !important;
+            color: var(--blue-primary) !important;
             margin-top: 2px;
         }
 
         .signature-line-box {
             margin: 30px 0 12px 0;
             height: 1px;
-            border-bottom: 1px dashed rgba(10, 25, 47, 0.25);
+            border-bottom: 1px dashed rgba(0, 51, 153, 0.25);
             width: 180px;
         }
 
         .sign-off-panel strong {
             font-size: 13px;
-            color: var(--navy-light);
+            color: var(--blue-primary);
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
@@ -262,7 +263,7 @@
 
         .footer-brand-span {
             font-weight: 700;
-            color: var(--navy-dark);
+            color: var(--blue-primary);
         }
 
         @media print {
@@ -299,7 +300,7 @@
                     </div>
                 </div>
 
-                <!-- Modern Aligned Contact Details Right Side -->
+                <!-- Contact Details Right Side -->
                 <div class="top-right-contact">
                     <div class="c-item-top">
                         <span>info@alphaorbitglobal.com</span>
@@ -316,13 +317,13 @@
                 </div>
             </div>
 
-            <!-- Dual Colored Geometric Accent Ribbons -->
+            <!-- Dual Colored Blue & Gold Accents -->
             <div class="design-strip-wrapper">
-                <div class="strip-navy"></div>
+                <div class="strip-blue"></div>
                 <div class="strip-gold"></div>
             </div>
 
-            <!-- Enhanced Ref & Date Tracking Console Box -->
+            <!-- Ref & Date Tracking Box -->
             <div class="tracking-bar">
                 <div class="ref-field">
                     <span>Our Ref:</span>
@@ -335,12 +336,12 @@
             </div>
         </header>
 
-        <!-- MAIN AREA (Kept pristine & clear) -->
+        <!-- MAIN AREA -->
         <main class="letter-body">
-            <!-- Left vacant deliberately for physical print applications or template typing -->
+            <!-- Left vacant deliberately for template typing or printing -->
         </main>
 
-        <!-- HIGH-END CLEAN SIGNATURE BLOCK -->
+        <!-- CORPORATE BLUE SIGNATURE BLOCK -->
         <div class="sign-off-panel">
             <p>Yours Faithfully,</p>
             <p class="company-signature-title">For: AlphaOrbit Worldwide Ltd</p>
