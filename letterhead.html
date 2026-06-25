@@ -35,18 +35,17 @@
             print-color-adjust: exact;
         }
 
-        /* Sovereign A4 Stationary Spec - Fixed Height Layout */
+        /* Sovereign A4 Stationary Spec - Print Safe Dimensions */
         .letterhead-container {
             background: var(--bg-surface);
             width: 210mm;
             height: 297mm;
-            /* Changed from min-height to absolute height */
             margin: 0 auto;
-            padding: 12mm 20mm 12mm 20mm;
+            padding: 12mm 20mm;
+            /* Standardized symmetrical vertical padding */
             position: relative;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
             box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
             overflow: hidden;
         }
@@ -209,22 +208,23 @@
         /* LETTER BODY CANVAS                         */
         /* ========================================== */
         .letter-body {
-            flex-grow: 1;
-            margin-top: 15px;
-            margin-bottom: 15px;
+            flex: 1;
+            /* Dynamically consumes remaining center space smoothly */
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
 
         /* ========================================== */
         /* SIGNATURE CLOSURE PANELS                   */
         /* ========================================== */
         .sign-off-panel {
-            margin-top: auto;
             padding: 14px 20px;
             background: linear-gradient(90deg, var(--bg-tint) 0%, transparent 100%);
             border-left: 4px solid var(--blue-prime);
             border-radius: 0 8px 8px 0;
             width: 55%;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            /* Safe distance from the footer element */
             position: relative;
             z-index: 3;
         }
@@ -243,7 +243,6 @@
 
         .signature-line-box {
             margin: 25px 0 10px 0;
-            /* Slightly shorter box to save print lines */
             height: 1px;
             border-bottom: 1px dashed rgba(0, 51, 153, 0.3);
             width: 190px;
@@ -269,6 +268,8 @@
             color: var(--text-light);
             position: relative;
             z-index: 3;
+            margin-top: auto;
+            /* Locks footer directly to bottom padding boundary */
         }
 
         .footer-left p {
@@ -294,27 +295,30 @@
             opacity: 0.8;
         }
 
-        /* CRITICAL SINGLE PAGE PRINT BLOCKS */
+        /* STRICT SINGLE-PAGE PRINT TARGETS */
         @media print {
             @page {
                 size: A4 portrait;
                 margin: 0;
-                /* Removes browser header / footer print rules */
             }
 
             body {
-                background: none;
-                padding: 0;
-                margin: 0;
+                background: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
                 width: 210mm;
                 height: 297mm;
             }
 
             .letterhead-container {
-                box-shadow: none;
-                padding: 12mm 20mm;
-                width: 210mm;
-                height: 297mm;
+                box-shadow: none !important;
+                padding: 12mm 20mm !important;
+                width: 210mm !important;
+                height: 297mm !important;
+                position: relative !important;
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: space-between !important;
                 page-break-inside: avoid;
             }
         }
@@ -360,8 +364,8 @@
 
             <div class="tracking-bar">
                 <div class="ref-field">
-                    <span> Ref:</span>
-                    <span class="line-filler">____________________</span>
+                    <span>Our Ref:</span>
+                    <span class="line-filler">AO/____________________</span>
                 </div>
                 <div class="date-field">
                     <span>Date:</span>
