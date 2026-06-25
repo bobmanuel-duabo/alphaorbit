@@ -4,16 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AlphaOrbit Worldwide Ltd - Clean Official Letterhead</title>
+    <title>AlphaOrbit Worldwide Ltd - Premium Letterhead</title>
     <!-- Tabler Icons Library -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
     <style>
         :root {
-            --navy-primary: #0A192F;
-            --gold-secondary: #D4AF37;
-            --text-dark: #222222;
-            --text-muted: #555555;
-            --border-light: #E0E0E0;
+            --navy-dark: #0A192F;
+            --navy-light: #172A45;
+            --gold-primary: #D4AF37;
+            --gold-light: #F4E8C1;
+            --text-dark: #1E293B;
+            --text-muted: #64748B;
+            --bg-light: #F8FAFC;
         }
 
         * {
@@ -25,177 +27,242 @@
         body {
             font-family: 'Inter', -apple-system, sans-serif;
             color: var(--text-dark);
-            background-color: #F5F5F5;
+            background-color: #E2E8F0;
             padding: 40px 0;
             -webkit-print-color-adjust: exact;
             print-color-adjust: exact;
         }
 
-        /* Standard A4 Dimensions */
+        /* Standard A4 Dimensions with internal layout rules */
         .letterhead-container {
             background: #FFFFFF;
             width: 210mm;
             min-height: 297mm;
             margin: 0 auto;
-            padding: 20mm;
+            padding: 24mm 20mm 20mm 20mm;
             position: relative;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        /* Corner Decorative Brand Geometric Watermark Accent */
+        .letterhead-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 140px;
+            height: 140px;
+            background: linear-gradient(135deg, rgba(10, 25, 47, 0.04) 0%, rgba(212, 175, 51, 0.02) 100%);
+            border-bottom-right-radius: 100%;
+            pointer-events: none;
         }
 
         /* ========================================== */
-        /* CORPORATE HEADER                           */
+        /* PREMIUM BRANDED HEADER                     */
         /* ========================================== */
         header {
             width: 100%;
-            margin-bottom: 35px;
+            position: relative;
+            z-index: 2;
         }
 
         .header-top {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
-            padding-bottom: 20px;
+            align-items: center;
+            padding-bottom: 24px;
         }
 
         .brand-identity {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 18px;
+        }
+
+        .logo-frame {
+            background: var(--bg-light);
+            padding: 6px;
+            border-radius: 8px;
+            border: 1px solid rgba(10, 25, 47, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
         }
 
         .logo-img-asset {
-            width: 80px;
-            height: 80px;
+            width: 75px;
+            height: 75px;
             object-fit: cover;
             border-radius: 4px;
         }
 
         .brand-text h1 {
-            font-size: 28px;
+            font-size: 30px;
             font-weight: 800;
-            color: var(--navy-primary);
-            letter-spacing: 0.5px;
-            line-height: 1.1;
+            color: var(--navy-dark);
+            letter-spacing: 0.75px;
+            line-height: 1;
         }
 
         .brand-text p {
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 700;
-            color: var(--gold-secondary);
-            letter-spacing: 3px;
+            color: var(--gold-primary);
+            letter-spacing: 4px;
             text-transform: uppercase;
-            margin-top: 4px;
+            margin-top: 6px;
         }
 
-        /* TOP RIGHT CONTACT BLOCK */
+        /* STYLED TOP RIGHT CONTACT PANEL */
         .top-right-contact {
-            text-align: right;
-            font-size: 13px;
-            color: var(--text-muted);
-            line-height: 1.6;
-            font-weight: 500;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
         }
 
-        .top-right-contact .c-item-top {
+        .c-item-top {
             display: flex;
             align-items: center;
             justify-content: flex-end;
-            gap: 6px;
-            margin-bottom: 2px;
+            gap: 8px;
+            font-size: 13px;
+            color: var(--navy-light);
+            font-weight: 500;
         }
 
-        .top-right-contact i {
-            color: var(--navy-primary);
-            font-size: 14px;
+        .c-item-top span {
+            border-right: 2px solid var(--gold-primary);
+            padding-right: 10px;
         }
 
-        /* BRAND COLOR DESIGN LINES */
-        .design-strip {
+        .c-item-top i {
+            color: var(--navy-dark);
+            font-size: 15px;
+            width: 20px;
+            text-align: center;
+        }
+
+        /* SHARP LOGO-THEMED STRIP ACCENT */
+        .design-strip-wrapper {
             width: 100%;
-            height: 4px;
-            background: var(--navy-primary);
+            height: 5px;
             position: relative;
-            margin-bottom: 2px;
+            margin-bottom: 4px;
         }
 
-        .design-strip::after {
-            content: '';
-            position: absolute;
-            bottom: -3px;
-            left: 0;
+        .strip-navy {
+            width: 100%;
+            height: 3px;
+            background: var(--navy-dark);
+        }
+
+        .strip-gold {
             width: 100%;
             height: 2px;
-            background: var(--gold-secondary);
+            background: var(--gold-primary);
         }
 
         /* ========================================== */
-        /* REF NO & DATE ALIGNMENT BAR                */
+        /* REF & DATE CONTAINER BLOCK                 */
         /* ========================================== */
         .tracking-bar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 0 5px 0;
-            margin-bottom: 40px;
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--navy-primary);
+            background-color: var(--bg-light);
+            padding: 12px 16px;
+            border-radius: 6px;
+            margin-top: 15px;
+            border: 1px solid rgba(10, 25, 47, 0.04);
         }
 
         .ref-field,
         .date-field {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--navy-dark);
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .line-filler {
-            color: var(--gold-secondary);
+            color: var(--gold-primary);
             font-weight: 400;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
         }
 
         /* ========================================== */
-        /* EMPTY LETTER BODY AREA                     */
+        /* BODY CONTAINER                             */
         /* ========================================== */
         .letter-body {
             flex-grow: 1;
+            margin-top: 40px;
         }
 
         /* ========================================== */
-        /* CLEAN SIGNATURE BOTTOM BLOCK               */
+        /* DESIGNER SIGNATURE FOOTPRINT               */
         /* ========================================== */
-        .sign-off {
+        .sign-off-panel {
             margin-top: auto;
-            padding-bottom: 40px;
+            padding: 24px;
+            background: linear-gradient(to right, var(--bg-light), transparent);
+            border-left: 3px solid var(--navy-dark);
+            border-radius: 0 8px 8px 0;
+            width: 60%;
+            margin-bottom: 20px;
         }
 
-        .sign-off p {
-            font-size: 15px;
-            line-height: 1.5;
+        .sign-off-panel p {
+            font-size: 14px;
+            color: var(--text-muted);
         }
 
-        .signature-space {
-            margin: 25px 0 10px 0;
-            height: 60px;
-            border-bottom: 1px dashed var(--navy-primary);
-            width: 220px;
+        .company-signature-title {
+            font-size: 16px !important;
+            font-weight: 700;
+            color: var(--navy-dark) !important;
+            margin-top: 2px;
+        }
+
+        .signature-line-box {
+            margin: 30px 0 12px 0;
+            height: 1px;
+            border-bottom: 1px dashed rgba(10, 25, 47, 0.25);
+            width: 180px;
+        }
+
+        .sign-off-panel strong {
+            font-size: 13px;
+            color: var(--navy-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         /* ========================================== */
-        /* MINIMAL FOOTER STRIP                       */
+        /* TECHNICAL CLEAN FOOTER                     */
         /* ========================================== */
         footer {
-            border-top: 1px solid var(--border-light);
-            padding-top: 15px;
+            border-top: 1px solid #E2E8F0;
+            padding-top: 16px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             font-size: 11px;
             color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .footer-brand-span {
+            font-weight: 700;
+            color: var(--navy-dark);
         }
 
         @media print {
@@ -206,7 +273,7 @@
 
             .letterhead-container {
                 box-shadow: none;
-                padding: 0;
+                padding: 24mm 20mm 20mm 20mm;
                 width: 100%;
                 height: 100%;
             }
@@ -218,19 +285,21 @@
 
     <div class="letterhead-container">
 
-        <!-- HEADER STRUCTURE -->
+        <!-- HEADER MODULE -->
         <header>
             <div class="header-top">
-                <!-- Top Left Identity -->
+                <!-- Branding Left Elements -->
                 <div class="brand-identity">
-                    <img src="alphaorbit logo.jpg.jpg" alt="AlphaOrbit Worldwide Ltd Logo" class="logo-img-asset">
+                    <div class="logo-frame">
+                        <img src="alphaorbit logo.jpg.jpg" alt="AlphaOrbit Worldwide Ltd Logo" class="logo-img-asset">
+                    </div>
                     <div class="brand-text">
                         <h1>ALPHAORBIT</h1>
                         <p>Worldwide Ltd</p>
                     </div>
                 </div>
 
-                <!-- Top Right Company Contact -->
+                <!-- Modern Aligned Contact Details Right Side -->
                 <div class="top-right-contact">
                     <div class="c-item-top">
                         <span>info@alphaorbitglobal.com</span>
@@ -247,14 +316,17 @@
                 </div>
             </div>
 
-            <!-- Dual Colored Logo-Themed Accent Lines -->
-            <div class="design-strip"></div>
+            <!-- Dual Colored Geometric Accent Ribbons -->
+            <div class="design-strip-wrapper">
+                <div class="strip-navy"></div>
+                <div class="strip-gold"></div>
+            </div>
 
-            <!-- Ref & Date Tracking Row -->
+            <!-- Enhanced Ref & Date Tracking Console Box -->
             <div class="tracking-bar">
                 <div class="ref-field">
                     <span>Our Ref:</span>
-                    <span class="line-filler">AO/___________________</span>
+                    <span class="line-filler">AO/____________________</span>
                 </div>
                 <div class="date-field">
                     <span>Date:</span>
@@ -263,23 +335,24 @@
             </div>
         </header>
 
-        <!-- EMPTY BODY CONTENT SPACE -->
+        <!-- MAIN AREA (Kept pristine & clear) -->
         <main class="letter-body">
-            <!-- Completely empty for printing or direct text entry -->
+            <!-- Left vacant deliberately for physical print applications or template typing -->
         </main>
 
-        <!-- CLEAN SIGNATURE BOTTOM BLOCK -->
-        <div class="sign-off">
+        <!-- HIGH-END CLEAN SIGNATURE BLOCK -->
+        <div class="sign-off-panel">
             <p>Yours Faithfully,</p>
-            <p>For: <strong>AlphaOrbit Worldwide Ltd</strong></p>
-            <div class="signature-space"></div>
-            <p><strong>Authorized Signatory / Director</strong></p>
+            <p class="company-signature-title">For: AlphaOrbit Worldwide Ltd</p>
+            <div class="signature-line-box"></div>
+            <strong>Authorized Signatory / Director</strong>
         </div>
 
-        <!-- FOOTER MARGIN -->
+        <!-- FOOTER BRAND DATA -->
         <footer>
             <div>
-                <p>&copy; 2026 AlphaOrbit Worldwide Ltd. All global rights reserved.</p>
+                <p>&copy; 2026 <span class="footer-brand-span">AlphaOrbit Worldwide Ltd.</span> All global rights
+                    reserved.</p>
             </div>
             <div>
                 <p>Enterprise Architecture &amp; Logistics Validation Services.</p>
