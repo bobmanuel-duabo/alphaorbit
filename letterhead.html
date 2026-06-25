@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlphaOrbit Worldwide Ltd - Official Letterhead</title>
+    <!-- Tabler Icons Library for crisp contact markers -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <style>
+        :root {
+            --navy-primary: #0A192F;
+            --gold-secondary: #D4AF37;
+            --text-dark: #333333;
+            --text-muted: #666666;
+            --border-light: #E0E0E0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            color: var(--text-dark);
+            background-color: #F5F5F5;
+            padding: 40px 0;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        /* Standard A4 Letter Dimensions */
+        .letterhead-container {
+            background: #FFFFFF;
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            padding: 20mm;
+            position: relative;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* ========================================== */
+        /* HEADER STYLE                               */
+        /* ========================================== */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--navy-primary);
+            padding-bottom: 20px;
+            margin-bottom: 50px;
+        }
+
+        .brand-identity {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-placeholder {
+            width: 65px;
+            height: 65px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .brand-text h1 {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--navy-primary);
+            letter-spacing: 1px;
+            line-height: 1.1;
+        }
+
+        .brand-text p {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--gold-secondary);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+
+        .corporate-meta {
+            text-align: right;
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        .corporate-meta strong {
+            color: var(--navy-primary);
+        }
+
+        /* ========================================== */
+        /* LETTER CONTENT AREA                        */
+        /* ========================================== */
+        .letter-body {
+            flex-grow: 1;
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        .letter-meta-date {
+            text-align: right;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .recipient-block {
+            margin-bottom: 40px;
+        }
+
+        .recipient-block p {
+            margin-bottom: 4px;
+        }
+
+        .letter-content p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .sign-off {
+            margin-top: 50px;
+        }
+
+        /* ========================================== */
+        /* FOOTER STYLE                               */
+        /* ========================================== */
+        footer {
+            border-top: 1px solid var(--border-light);
+            padding-top: 15px;
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        .footer-channels {
+            display: flex;
+            gap: 20px;
+        }
+
+        .channel-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .channel-item i {
+            color: var(--navy-primary);
+            font-size: 14px;
+        }
+
+        .channel-item a {
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+
+        /* Optimization for physical desktop printing */
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+
+            .letterhead-container {
+                box-shadow: none;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="letterhead-container">
+
+        <!-- TOP LETTERHEAD LOGO & META -->
+        <header>
+            <div class="brand-identity">
+                <!-- Links up directly to your existing workspace image asset -->
+                <img src="alphaorbit logo.jpg.jpg" alt="AlphaOrbit Worldwide Ltd Logo" class="logo-placeholder">
+                <div class="brand-text">
+                    <h1>ALPHAORBIT</h1>
+                    <p>Worldwide Ltd</p>
+                </div>
+            </div>
+            <div class="corporate-meta">
+                <p><strong>Enterprise Sourcing & Logistics Desk</strong></p>
+                <p>Global Asset Logistics & Marine Exports</p>
+                <p>Ref: AO/CORP/2026/01</p>
+            </div>
+        </header>
+
+        <!-- PRINTABLE BODY CONTENT -->
+        <main class="letter-body">
+            <div class="letter-meta-date">
+                <p>June 25, 2026</p>
+            </div>
+
+            <div class="recipient-block">
+                <p><strong>To:</strong> Strategic Operations Partner</p>
+                <p>Global Trade and Supply Chains</p>
+                <p>International Commerce Division</p>
+            </div>
+
+            <div class="letter-content">
+                <p>Dear Partner,</p>
+                <p>[Type your corporate message here. This letterhead setup maps directly to identical design guidelines
+                    used on your landing platform. It provides clean tracking alignments, solid readability margins, and
+                    crisp typography for cross-border communications and contract validations.]</p>
+                <p>Our global operations desk maintains end-to-end oversight to secure bulk corporate investments
+                    seamlessly across our primary enterprise divisions. We look forward to reinforcing optimal value
+                    parameters throughout our active trade configuration frameworks.</p>
+            </div>
+
+            <div class="sign-off">
+                <p>Respectfully yours,</p>
+                <br><br>
+                <p><strong>Executive Directorate</strong></p>
+                <p>AlphaOrbit Worldwide Ltd</p>
+            </div>
+        </main>
+
+        <!-- BOTTOM STRIP CONTACT METRICS -->
+        <footer>
+            <div>
+                <p>&copy; 2026 AlphaOrbit Worldwide Ltd. All global rights reserved.[cite: 1]</p>
+            </div>
+            <div class="footer-channels">
+                <div class="channel-item">
+                    <i class="ti ti-mail"></i>
+                    <a href="mailto:info@alphaorbitglobal.com">info@alphaorbitglobal.com</a>[cite: 1]
+                </div>
+                <div class="channel-item">
+                    <i class="ti ti-brand-whatsapp"></i>
+                    <span>+234 706 615 1787</span>[cite: 1]
+                </div>
+                <div class="channel-item">
+                    <i class="ti ti-world"></i>
+                    <span>alphaorbitglobal.com</span>[cite: 1]
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
