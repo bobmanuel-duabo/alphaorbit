@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AlphaOrbit Worldwide Ltd - CAC Official Letterhead</title>
+    <title>AlphaOrbit Worldwide Ltd - Clean Official Letterhead</title>
     <!-- Tabler Icons Library -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
     <style>
@@ -46,7 +46,7 @@
         }
 
         /* ========================================== */
-        /* OFFICIAL CORPORATE HEADER                  */
+        /* CORPORATE HEADER                           */
         /* ========================================== */
         header {
             width: 100%;
@@ -56,8 +56,8 @@
         .header-top {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            padding-bottom: 15px;
+            align-items: flex-start;
+            padding-bottom: 20px;
         }
 
         .brand-identity {
@@ -67,14 +67,14 @@
         }
 
         .logo-img-asset {
-            width: 75px;
-            height: 75px;
+            width: 80px;
+            height: 80px;
             object-fit: cover;
             border-radius: 4px;
         }
 
         .brand-text h1 {
-            font-size: 26px;
+            font-size: 28px;
             font-weight: 800;
             color: var(--navy-primary);
             letter-spacing: 0.5px;
@@ -82,30 +82,34 @@
         }
 
         .brand-text p {
-            font-size: 11px;
+            font-size: 12px;
             font-weight: 700;
             color: var(--gold-secondary);
             letter-spacing: 3px;
             text-transform: uppercase;
-            margin-top: 3px;
+            margin-top: 4px;
         }
 
-        .corporate-reg-meta {
+        /* TOP RIGHT CONTACT BLOCK */
+        .top-right-contact {
             text-align: right;
             font-size: 13px;
             color: var(--text-muted);
             line-height: 1.6;
+            font-weight: 500;
         }
 
-        .rc-number {
-            font-size: 14px;
-            font-weight: 700;
+        .top-right-contact .c-item-top {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 6px;
+            margin-bottom: 2px;
+        }
+
+        .top-right-contact i {
             color: var(--navy-primary);
-            background: #F0F4F8;
-            padding: 4px 10px;
-            border-radius: 4px;
-            display: inline-block;
-            margin-bottom: 4px;
+            font-size: 14px;
         }
 
         /* BRAND COLOR DESIGN LINES */
@@ -148,7 +152,6 @@
             gap: 5px;
         }
 
-        /* Clean printable underscores */
         .line-filler {
             color: var(--gold-secondary);
             font-weight: 400;
@@ -156,33 +159,34 @@
         }
 
         /* ========================================== */
-        /* DOCUMENT CONTENT AREA                      */
+        /* EMPTY LETTER BODY AREA                     */
         /* ========================================== */
         .letter-body {
             flex-grow: 1;
-            font-size: 15px;
-            line-height: 1.7;
-            color: #333333;
-        }
-
-        .letter-content p {
-            margin-bottom: 20px;
-            text-align: justify;
-        }
-
-        .sign-off {
-            margin-top: 60px;
-        }
-
-        .signature-space {
-            margin: 20px 0;
-            height: 45px;
-            border-bottom: 1px dashed var(--border-light);
-            width: 200px;
         }
 
         /* ========================================== */
-        /* FOOTER STRIP                               */
+        /* CLEAN SIGNATURE BOTTOM BLOCK               */
+        /* ========================================== */
+        .sign-off {
+            margin-top: auto;
+            padding-bottom: 40px;
+        }
+
+        .sign-off p {
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .signature-space {
+            margin: 25px 0 10px 0;
+            height: 60px;
+            border-bottom: 1px dashed var(--navy-primary);
+            width: 220px;
+        }
+
+        /* ========================================== */
+        /* MINIMAL FOOTER STRIP                       */
         /* ========================================== */
         footer {
             border-top: 1px solid var(--border-light);
@@ -192,22 +196,6 @@
             align-items: center;
             font-size: 11px;
             color: var(--text-muted);
-        }
-
-        .footer-channels {
-            display: flex;
-            gap: 20px;
-        }
-
-        .channel-item {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .channel-item i {
-            color: var(--navy-primary);
-            font-size: 14px;
         }
 
         @media print {
@@ -233,29 +221,40 @@
         <!-- HEADER STRUCTURE -->
         <header>
             <div class="header-top">
+                <!-- Top Left Identity -->
                 <div class="brand-identity">
-                    <!-- References your project logo asset verbatim -->
                     <img src="alphaorbit logo.jpg.jpg" alt="AlphaOrbit Worldwide Ltd Logo" class="logo-img-asset">
                     <div class="brand-text">
                         <h1>ALPHAORBIT</h1>
                         <p>Worldwide Ltd</p>
                     </div>
                 </div>
-                <div class="corporate-reg-meta">
-                    <!-- Replace with your actual RC registration number string from CAC -->
-                    <div class="rc-number">RC: 0000000</div>
-                    <p>Global Freight, Energy & Marine Sourcing</p>
+
+                <!-- Top Right Company Contact -->
+                <div class="top-right-contact">
+                    <div class="c-item-top">
+                        <span>info@alphaorbitglobal.com</span>
+                        <i class="ti ti-mail"></i>
+                    </div>
+                    <div class="c-item-top">
+                        <span>+234 706 615 1787</span>
+                        <i class="ti ti-brand-whatsapp"></i>
+                    </div>
+                    <div class="c-item-top">
+                        <span>alphaorbitglobal.com</span>
+                        <i class="ti ti-world"></i>
+                    </div>
                 </div>
             </div>
 
             <!-- Dual Colored Logo-Themed Accent Lines -->
             <div class="design-strip"></div>
 
-            <!-- Ref & Date Row separated directly by the design accents -->
+            <!-- Ref & Date Tracking Row -->
             <div class="tracking-bar">
                 <div class="ref-field">
                     <span>Our Ref:</span>
-                    <span class="line-filler">AO/CAC/_______________</span>
+                    <span class="line-filler">AO/___________________</span>
                 </div>
                 <div class="date-field">
                     <span>Date:</span>
@@ -264,48 +263,26 @@
             </div>
         </header>
 
-        <!-- DOCUMENT CONTENT FILLER -->
+        <!-- EMPTY BODY CONTENT SPACE -->
         <main class="letter-body">
-            <div class="letter-content">
-                <p><strong>The Registrar General,</strong><br>
-                    Corporate Affairs Commission,<br>
-                    Plot 420, Tigris Crescent, Maitama,<br>
-                    Abuja, Nigeria.</p>
-
-                <br>
-                <p>Dear Sir/Ma,</p>
-                <p><strong>RE: [INSERT THE CORRESPONDENCE OR STATUTORY FILING SUBJECT HERE]</strong></p>
-                <p>[Type your formal corporate message, dynamic board resolution details, or statutory update
-                    particulars here. The styling elements scale sharply inside browser previews, keeping layouts
-                    tightly configured for printing on standard corporate stationery stocks.]</p>
-            </div>
-
-            <div class="sign-off">
-                <p>Yours Faithfully,</p>
-                <p>For: <strong>AlphaOrbit Worldwide Ltd</strong></p>
-                <div class="signature-space"></div>
-                <p><strong>Director / Secretary</strong></p>
-            </div>
+            <!-- Completely empty for printing or direct text entry -->
         </main>
 
-        <!-- CORPORATE FOOTER -->
+        <!-- CLEAN SIGNATURE BOTTOM BLOCK -->
+        <div class="sign-off">
+            <p>Yours Faithfully,</p>
+            <p>For: <strong>AlphaOrbit Worldwide Ltd</strong></p>
+            <div class="signature-space"></div>
+            <p><strong>Authorized Signatory / Director</strong></p>
+        </div>
+
+        <!-- FOOTER MARGIN -->
         <footer>
             <div>
                 <p>&copy; 2026 AlphaOrbit Worldwide Ltd. All global rights reserved.</p>
             </div>
-            <div class="footer-channels">
-                <div class="channel-item">
-                    <i class="ti ti-mail"></i>
-                    <span>info@alphaorbitglobal.com</span>
-                </div>
-                <div class="channel-item">
-                    <i class="ti ti-brand-whatsapp"></i>
-                    <span>+234 706 615 1787</span>
-                </div>
-                <div class="channel-item">
-                    <i class="ti ti-world"></i>
-                    <span>alphaorbitglobal.com</span>
-                </div>
+            <div>
+                <p>Enterprise Architecture &amp; Logistics Validation Services.</p>
             </div>
         </footer>
 
