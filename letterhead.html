@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AlphaOrbit Worldwide Ltd - Sovereign Letterhead Suite</title>
-    <!-- Tabler Icons Library -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
     <style>
         :root {
@@ -31,19 +30,19 @@
             font-family: 'Inter', -apple-system, sans-serif;
             color: var(--text-main);
             background-color: var(--bg-canvas);
-            padding: 40px 0;
+            padding: 30px 0;
             -webkit-print-color-adjust: exact;
             print-color-adjust: exact;
         }
 
-        /* Sovereign A4 Stationary Spec - Page Optimized */
+        /* Sovereign A4 Stationary Spec - Fixed Height Layout */
         .letterhead-container {
             background: var(--bg-surface);
             width: 210mm;
-            min-height: 297mm;
+            height: 297mm;
+            /* Changed from min-height to absolute height */
             margin: 0 auto;
-            padding: 12mm 20mm 15mm 20mm;
-            /* Compact margins to guarantee 1-page printing */
+            padding: 12mm 20mm 12mm 20mm;
             position: relative;
             display: flex;
             flex-direction: column;
@@ -80,7 +79,6 @@
             justify-content: space-between;
             align-items: center;
             padding-bottom: 12px;
-            /* Halved to compress vertical profile */
         }
 
         .brand-identity {
@@ -174,17 +172,15 @@
         }
 
         /* ========================================== */
-        /* COMPACT REF & DATE TRACKING BOX           */
+        /* REF & DATE TRACKING BOX                   */
         /* ========================================== */
         .tracking-bar {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 10px 16px;
-            /* Optimized padding spacing */
             border-radius: 6px;
             margin-top: 10px;
-            /* Tightened from 18px */
             background: var(--bg-tint);
             border: 1px solid rgba(0, 51, 153, 0.05);
             border-left: 3px solid var(--gold-prime);
@@ -214,8 +210,8 @@
         /* ========================================== */
         .letter-body {
             flex-grow: 1;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            margin-top: 15px;
+            margin-bottom: 15px;
         }
 
         /* ========================================== */
@@ -223,13 +219,12 @@
         /* ========================================== */
         .sign-off-panel {
             margin-top: auto;
-            /* Forces element to remain balanced near page end */
-            padding: 16px 20px;
+            padding: 14px 20px;
             background: linear-gradient(90deg, var(--bg-tint) 0%, transparent 100%);
             border-left: 4px solid var(--blue-prime);
             border-radius: 0 8px 8px 0;
             width: 55%;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             position: relative;
             z-index: 3;
         }
@@ -247,7 +242,8 @@
         }
 
         .signature-line-box {
-            margin: 30px 0 10px 0;
+            margin: 25px 0 10px 0;
+            /* Slightly shorter box to save print lines */
             height: 1px;
             border-bottom: 1px dashed rgba(0, 51, 153, 0.3);
             width: 190px;
@@ -261,11 +257,11 @@
         }
 
         /* ========================================== */
-        /* PRINT STABLE BASELINE FOOTER               */
+        /* BASELINE FOOTER                            */
         /* ========================================== */
         footer {
             border-top: 1px solid #E2E8F0;
-            padding-top: 14px;
+            padding-top: 12px;
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
@@ -298,17 +294,28 @@
             opacity: 0.8;
         }
 
+        /* CRITICAL SINGLE PAGE PRINT BLOCKS */
         @media print {
+            @page {
+                size: A4 portrait;
+                margin: 0;
+                /* Removes browser header / footer print rules */
+            }
+
             body {
                 background: none;
                 padding: 0;
+                margin: 0;
+                width: 210mm;
+                height: 297mm;
             }
 
             .letterhead-container {
                 box-shadow: none;
-                padding: 12mm 20mm 15mm 20mm;
-                width: 100%;
-                height: 100%;
+                padding: 12mm 20mm;
+                width: 210mm;
+                height: 297mm;
+                page-break-inside: avoid;
             }
         }
     </style>
@@ -318,10 +325,8 @@
 
     <div class="letterhead-container">
 
-        <!-- HEADER MODULE -->
         <header>
             <div class="header-top">
-                <!-- Branding Left Elements -->
                 <div class="brand-identity">
                     <div class="logo-frame">
                         <img src="alphaorbit logo.jpg.jpg" alt="AlphaOrbit Worldwide Ltd Logo" class="logo-img-asset">
@@ -332,7 +337,6 @@
                     </div>
                 </div>
 
-                <!-- Contact Details Right Side -->
                 <div class="top-right-contact">
                     <div class="c-item-top">
                         <span>info@alphaorbitglobal.com</span>
@@ -349,17 +353,15 @@
                 </div>
             </div>
 
-            <!-- Dual Colored Blue & Gold Accents -->
             <div class="design-strip-wrapper">
                 <div class="strip-blue"></div>
                 <div class="strip-gold"></div>
             </div>
 
-            <!-- Optimized Reference & Tracking Array -->
             <div class="tracking-bar">
                 <div class="ref-field">
-                    <span> Ref:</span>
-                    <span class="line-filler">____________________</span>
+                    <span>Our Ref:</span>
+                    <span class="line-filler">AO/____________________</span>
                 </div>
                 <div class="date-field">
                     <span>Date:</span>
@@ -368,12 +370,9 @@
             </div>
         </header>
 
-        <!-- MAIN AREA (Maximized space for letter body) -->
         <main class="letter-body">
-            <!-- Left vacant deliberately for printing or template typing -->
         </main>
 
-        <!-- HIGH-END SIGNATURE BLOCK (Safely calculated on Page 1 boundary) -->
         <div class="sign-off-panel">
             <p>Yours Faithfully,</p>
             <p class="company-signature-title">For: AlphaOrbit Worldwide Ltd</p>
@@ -381,7 +380,6 @@
             <strong>Authorized Signatory / Director</strong>
         </div>
 
-        <!-- CORPORATE DATA FOOTER -->
         <footer>
             <div class="footer-left">
                 <p>&copy; 2026 <span class="footer-brand-span">AlphaOrbit Worldwide Ltd.</span> All global rights
