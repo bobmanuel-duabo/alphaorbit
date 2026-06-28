@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AlphaOrbit Worldwide Ltd | Global Supply Chain, Freight, & Energy Solutions</title>
     <meta name="description"
-        content="AlphaOrbit Worldwide Ltd connects international trade across agro & seafood export, hardwood charcoal, fashion accessories, global freight, and international caregiving staffing.">
+        content="AlphaOrbit Worldwide Ltd connects international trade across agro & seafood export, hardwood charcoal, fashion logistics, global freight, and international caregiving staffing.">
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="AlphaOrbit Worldwide Ltd | Global Trade & Logistics">
     <meta property="og:description"
-        content="Connecting international trade across agro & seafood export, hardwood charcoal, premium fashion accessories, corporate logistics, and international caregiving placement.">
+        content="Connecting international trade across agro & seafood export, hardwood charcoal, apparel, corporate logistics, and international caregiving placement.">
     <meta property="og:image" content="alphaorbit logo.jpg.jpg">
     <meta property="og:url" content="https://alphaorbitglobal.com">
     <meta name="twitter:card" content="summary_large_image">
@@ -162,7 +162,7 @@
                     <span class="div-num">03</span>
                     <h3>Apparel & Premium Fashion Accessories</h3>
                     <p>Facilitating the global sourcing and distribution of high-quality garments, textiles, and fashion
-                        accessories across international retail channels[cite: 1].</p>
+                        accessories.</p>
                     <ul class="div-list">
                         <li><i class="ti ti-circle-check"></i> Bulk Clothing & Textile Export Supply</li>
                         <li><i class="ti ti-circle-check"></i> Premium Fashion Accessories & Hardware</li>
@@ -265,7 +265,7 @@
                                 <option value="" disabled selected>Please select a business division...</option>
                                 <option value="agro">Agro & Seafood Export (Periwinkle, Prawns, Fish)</option>
                                 <option value="energy">Energy & Hardwood Charcoal Export</option>
-                                <option value="fashion">Apparel & Fashion Accessories</option>
+                                <option value="fashion">Apparel & Fashion Logistics</option>
                                 <option value="freight">Global Freight & Corporate Logistics</option>
                                 <option value="healthcare">International Caregiving Staffing Placement</option>
                             </select>
@@ -315,6 +315,7 @@
     <button id="btt" aria-label="Scroll back to top view"><i class="ti ti-arrow-up" aria-hidden="true"></i></button>
 
     <script>
+        // 1. Mobile Menu Toggle
         const menuToggle = document.getElementById('menuToggle');
         const navLinks = document.getElementById('navLinks');
 
@@ -335,6 +336,7 @@
             });
         });
 
+        // 2. Active Scroll Tracker Highlight & Back to Top Toggle
         const sections = document.querySelectorAll('section');
         const navItems = document.querySelectorAll('.nav-links a:not(.nav-cta-btn)');
         const btt = document.getElementById('btt');
@@ -366,6 +368,7 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
+        // 3. Formspree Submission Core
         const contactForm = document.getElementById('contactForm');
         const formSubmitBtn = document.getElementById('formSubmitBtn');
         const formStatus = document.getElementById('formStatus');
@@ -397,7 +400,7 @@
                 }
             } catch (error) {
                 formStatus.className = "form-status-msg error";
-                navStatus.innerText = "Network error. Please check your connection and try again.";
+                formStatus.innerText = "Network error. Please check your connection and try again.";
             } finally {
                 formSubmitBtn.disabled = false;
                 formSubmitBtn.innerText = "Send Inquiry";

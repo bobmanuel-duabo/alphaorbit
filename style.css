@@ -127,11 +127,11 @@ ul {
    04. TOP INFO RIBBON
    ========================================================================== */
 .top-bar {
-    background-color: rgba(0, 8, 92, 0.5);
+    background-color: #00053D;
     color: var(--text-light);
     font-size: 0.75rem;
-    padding: 12px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(229, 184, 66, 0.15);
 }
 
 .bar-content {
@@ -144,7 +144,6 @@ ul {
     display: flex;
     align-items: center;
     gap: 16px;
-    color: rgba(255, 255, 255, 0.9);
 }
 
 .bar-left i {
@@ -152,7 +151,7 @@ ul {
 }
 
 .bar-left .sep {
-    color: rgba(255, 255, 255, 0.2);
+    color: #1e293b;
 }
 
 .bar-left a:hover {
@@ -165,10 +164,9 @@ ul {
     gap: 6px;
     background-color: rgba(37, 211, 102, 0.15);
     color: #25d366;
-    padding: 6px 14px;
+    padding: 4px 10px;
     border-radius: 4px;
     font-weight: 600;
-    transition: all 0.2s ease;
 }
 
 .bar-right a:hover {
@@ -186,7 +184,7 @@ ul {
     z-index: 999;
     backdrop-filter: blur(8px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 14px 0;
+    padding: 10px 0;
 }
 
 .nav-container {
@@ -202,7 +200,7 @@ ul {
 }
 
 .logo-img {
-    height: 48px;
+    height: 46px;
     width: auto;
     object-fit: contain;
     border-radius: 4px;
@@ -216,7 +214,7 @@ ul {
 .brand-primary {
     font-family: var(--font-body);
     color: #fff;
-    font-size: 1.35rem;
+    font-size: 1.3rem;
     font-weight: 800;
     letter-spacing: 1.5px;
     line-height: 1.1;
