@@ -345,9 +345,9 @@ ul {
 ========================================================================== */
 .hero-section {
     position: relative;
-    background-image: url('bent-van-aeken-0A7YwYhZhWw-unsplash.jpg');
+    background-image: url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1920&q=80');
     background-size: cover;
-    background-position: center center;
+    background-position: center;
     min-height: 85vh;
     display: flex;
     align-items: center;
@@ -358,7 +358,7 @@ ul {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(105deg, rgba(0, 11, 126, 0.92) 0%, rgba(0, 5, 61, 0.85) 50%, rgba(0, 0, 0, 0.65) 100%);
+    background: linear-gradient(105deg, rgba(0, 11, 126, 0.96) 0%, rgba(0, 5, 61, 0.88) 50%, rgba(0, 0, 0, 0.6) 100%);
     z-index: 1;
 }
 
@@ -385,27 +385,6 @@ ul {
     margin-bottom: 28px;
 }
 
-.hero-content h1 {
-    font-family: var(--font-header);
-    font-size: clamp(2.4rem, 5vw, 3.8rem);
-    line-height: 1.12;
-    margin-bottom: 22px;
-    letter-spacing: -0.5px;
-}
-
-.hero-content p {
-    color: #cbd5e1;
-    font-size: 1.08rem;
-    margin-bottom: 40px;
-    max-width: 600px;
-    line-height: 1.7;
-}
-
-.hero-actions {
-    display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-}
 
 /* ==========================================================================
    08. METRICS STATS BAR
