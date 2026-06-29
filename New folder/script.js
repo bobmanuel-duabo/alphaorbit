@@ -3,6 +3,8 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Inform CSS that JavaScript executed successfully to unlock scrolls safely
+    document.body.classList.add('js-ready');
 
     // Mobile Navigation Drawer Toggle Handler
     const menuToggle = document.getElementById('menuToggle');
@@ -54,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // DOM Intersection Observers (Fluid Scroll Transitions)
-    const observerOptions = { threshold: 0.12 };
+    const observerOptions = { threshold: 0.05, rootMargin: "0px 0px -50px 0px" };
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
