@@ -1090,18 +1090,32 @@ ul {
     justify-content: center;
     font-size: 1.85rem;
     box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
-    z-index: 1000;
+    z-index: 99999;
+    /* Higher z-index forces it on top of footer layers */
     transition: var(--t);
+    text-indent: -9999px;
+    /* Hides the broken text layout cleanly */
+    overflow: hidden;
+}
+
+/* Re-enables the font icon framework to display inside the container */
+.whatsapp-float i,
+.whatsapp-float svg {
+    text-indent: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .whatsapp-float:hover {
     transform: translateY(-5px) scale(1.05);
+    background: #20ba5a;
 }
 
 #btt {
     position: fixed;
     bottom: 98px;
-    right: 28px;
+    right: 34px;
     width: 46px;
     height: 46px;
     background: var(--gold-grad);
@@ -1117,12 +1131,17 @@ ul {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s, transform 0.3s;
-    z-index: 999;
+    z-index: 99998;
+    /* Pulls it up securely above the footer graphics */
 }
 
 #btt.show {
     opacity: 1;
     pointer-events: auto;
+}
+
+#btt:hover {
+    transform: translateY(-3px);
 }
 
 /* ==========================================================================
