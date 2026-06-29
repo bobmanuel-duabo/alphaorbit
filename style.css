@@ -345,9 +345,9 @@ ul {
 ========================================================================== */
 .hero-section {
     position: relative;
-    background-image: url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1920&q=80');
+    background-image: url('bent-van-aeken-0A7YwYhZhWw-unsplash.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     min-height: 85vh;
     display: flex;
     align-items: center;
@@ -358,7 +358,7 @@ ul {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(105deg, rgba(0, 11, 126, 0.96) 0%, rgba(0, 5, 61, 0.88) 50%, rgba(0, 0, 0, 0.6) 100%);
+    background: linear-gradient(105deg, rgba(0, 11, 126, 0.92) 0%, rgba(0, 5, 61, 0.85) 50%, rgba(0, 0, 0, 0.65) 100%);
     z-index: 1;
 }
 
