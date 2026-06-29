@@ -77,17 +77,26 @@ ul {
 }
 
 /* ==========================================================================
-   03. SCROLL REVEAL ANIMATIONS
+   03. SAFE ACCESSIBILITY ANIMATIONS (Failsafe Added)
 ========================================================================== */
 .reveal {
-    opacity: 0;
-    transform: translateY(28px);
+    opacity: 1;
+    transform: none;
     transition: opacity 0.65s ease, transform 0.65s ease;
 }
 
-.reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
+@media (prefers-reduced-motion: no-preference) {
+
+    /* Only apply initial hidden state if animations are fully supported */
+    body.js-ready .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    body.js-ready .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* ==========================================================================
@@ -333,30 +342,25 @@ ul {
 }
 
 /* ==========================================================================
-   07. HERO SECTION
+   07. HERO SECTION (Fixed Attachment Glitch Solved)
 ========================================================================== */
 .hero-section {
     position: relative;
     background-image: url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1920&q=80');
     background-size: cover;
     background-position: center;
-    background-attachment: scroll;
-    min-height: 88vh;
+    min-height: 85vh;
     display: flex;
     align-items: center;
     color: #fff;
-}
-
-@media (pointer: fine) {
-    .hero-section {
-        background-attachment: fixed;
-    }
+    overflow: hidden;
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(105deg, rgba(0, 11, 126, 0.94) 0%, rgba(0, 5, 61, 0.82) 50%, rgba(0, 0, 0, 0.45) 100%);
+    background: linear-gradient(105deg, rgba(0, 11, 126, 0.96) 0%, rgba(0, 5, 61, 0.88) 50%, rgba(0, 0, 0, 0.6) 100%);
+    z-index: 1;
 }
 
 .hero-content {
@@ -614,146 +618,25 @@ ul {
 
 /* ==========================================================================
    11. ENTERPRISE DIVISIONS
-========================================================================== */
-.divisions-section {
-    padding: 110px 0;
-    background: var(--bg-light);
-}
-
-.div-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "text visual";
-    gap: 70px;
-    align-items: center;
-    margin-bottom: 110px;
-}
-
-.div-row:last-child {
-    margin-bottom: 0;
-}
-
-.div-row.reverse {
-    grid-template-areas: "visual text";
-}
-
-.div-row.reverse .div-text {
-    grid-area: text;
-}
-
-.div-row.reverse .div-visual {
-    grid-area: visual;
-}
-
-.div-text {
-    position: relative;
-    padding-top: 20px;
-}
-
-.div-num {
-    font-weight: 800;
-    font-size: 5rem;
-    color: rgba(0, 11, 126, 0.04);
-    position: absolute;
-    top: -30px;
-    left: -10px;
-    line-height: 1;
-    user-select: none;
-    z-index: 0;
-}
-
-.div-text h3 {
-    font-family: var(--font-header);
-    font-size: 1.9rem;
-    color: var(--text-dark);
-    margin-bottom: 18px;
-    position: relative;
-    z-index: 1;
-}
-
-.div-text p {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-    margin-bottom: 24px;
-    line-height: 1.75;
-}
-
-.div-list {
-    margin-bottom: 28px;
-}
-
-.div-list li {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--text-dark);
-    margin-bottom: 12px;
-}
-
-.div-list i {
-    color: var(--gold-primary);
-    font-size: 1.1rem;
-    flex-shrink: 0;
-}
-
-.div-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--blue-primary);
-    font-weight: 700;
-    font-size: 0.88rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    border-bottom: 2px solid rgba(0, 11, 126, 0.2);
-    padding-bottom: 2px;
-    transition: var(--t);
-}
-
-.div-cta:hover {
-    color: var(--gold-primary);
-    border-color: var(--gold-primary);
-    gap: 14px;
-}
-
-.div-visual {
-    position: relative;
-    height: 420px;
-    border-radius: var(--radius-l);
-    box-shadow: var(--shadow-l);
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-}
-
-.div-visual::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, transparent 50%, rgba(0, 5, 61, 0.45) 100%);
-}
-
-.div-visual-badge {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    z-index: 2;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(0, 5, 61, 0.75);
-    backdrop-filter: blur(8px);
-    color: var(--gold-primary);
-    font-size: 0.78rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 7px 14px;
-    border-radius: var(--radius-s);
-    border: 1px solid rgba(229, 184, 66, 0.25);
-}
+================================================================占
+.divisions-section { padding: 110px 0; background: var(--bg-light); }
+.div-row { display: grid; grid-template-columns: 1fr 1fr; grid-template-areas: "text visual"; gap: 70px; align-items: center; margin-bottom: 110px; }
+.div-row:last-child { margin-bottom: 0; }
+.div-row.reverse { grid-template-areas: "visual text"; }
+.div-row.reverse .div-text { grid-area: text; }
+.div-row.reverse .div-visual { grid-area: visual; }
+.div-text { position: relative; padding-top: 20px; }
+.div-num { font-weight: 800; font-size: 5rem; color: rgba(0,11,126,0.04); position: absolute; top: -30px; left: -10px; line-height: 1; user-select: none; z-index: 0; }
+.div-text h3 { font-family: var(--font-header); font-size: 1.9rem; color: var(--text-dark); margin-bottom: 18px; position: relative; z-index: 1; }
+.div-text p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px; line-height: 1.75; }
+.div-list { margin-bottom: 28px; }
+.div-list li { display: flex; align-items: center; gap: 12px; font-size: 0.9rem; font-weight: 600; color: var(--text-dark); margin-bottom: 12px; }
+.div-list i { color: var(--gold-primary); font-size: 1.1rem; flex-shrink: 0; }
+.div-cta { display: inline-flex; align-items: center; gap: 8px; color: var(--blue-primary); font-weight: 700; font-size: 0.88rem; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 2px solid rgba(0,11,126,0.2); padding-bottom: 2px; transition: var(--t); }
+.div-cta:hover { color: var(--gold-primary); border-color: var(--gold-primary); gap: 14px; }
+.div-visual { position: relative; height: 420px; border-radius: var(--radius-l); box-shadow: var(--shadow-l); background-size: cover; background-position: center; overflow: hidden; }
+.div-visual::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 50%, rgba(0,5,61,0.45) 100%); }
+.div-visual-badge { position: absolute; bottom: 20px; left: 20px; z-index: 2; display: inline-flex; align-items: center; gap: 8px; background: rgba(0,5,61,0.75); backdrop-filter: blur(8px); color: var(--gold-primary); font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 7px 14px; border-radius: var(--radius-s); border: 1px solid rgba(229,184,66,0.25); }
 
 /* Visual Background Handlers */
 .div-agro {
