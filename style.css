@@ -698,6 +698,10 @@ ul {
 }
 
 /* Workspace Mapped Images */
+.div-catering {
+    background-image: url('catering.jpg');
+}
+
 .div-agro {
     background-image: url('agro.jpg');
 }
