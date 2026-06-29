@@ -1,6 +1,6 @@
 /* ==========================================================================
    01. VARIABLES & BRAND TOKENS
-   ========================================================================== */
+========================================================================== */
 :root {
     --blue-primary: #000B7E;
     --blue-deep: #00053D;
@@ -23,12 +23,12 @@
     --shadow-l: 0 16px 40px rgba(0, 0, 0, 0.14);
     --font-body: 'Inter', system-ui, sans-serif;
     --font-header: 'Playfair Display', Georgia, serif;
-    --transition: all 0.3s ease;
+    --t: all 0.3s ease;
 }
 
 /* ==========================================================================
    02. RESET & BASE
-   ========================================================================== */
+========================================================================== */
 *,
 *::before,
 *::after {
@@ -47,7 +47,7 @@ section {
 
 body {
     font-family: var(--font-body);
-    background-color: var(--bg-light);
+    background: var(--bg-light);
     color: var(--text-dark);
     line-height: 1.65;
     -webkit-font-smoothing: antialiased;
@@ -62,7 +62,7 @@ img {
 a {
     color: inherit;
     text-decoration: none;
-    transition: var(--transition);
+    transition: var(--t);
 }
 
 ul {
@@ -77,8 +77,8 @@ ul {
 }
 
 /* ==========================================================================
-   03. SCROLL REVEAL
-   ========================================================================== */
+   03. SCROLL REVEAL ANIMATIONS
+========================================================================== */
 .reveal {
     opacity: 0;
     transform: translateY(28px);
@@ -91,8 +91,8 @@ ul {
 }
 
 /* ==========================================================================
-   04. BUTTONS
-   ========================================================================== */
+   04. BUTTON COMPONENT
+========================================================================== */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -104,7 +104,7 @@ ul {
     letter-spacing: 0.8px;
     border-radius: var(--radius-m);
     cursor: pointer;
-    transition: var(--transition);
+    transition: var(--t);
     border: 2px solid transparent;
     white-space: nowrap;
 }
@@ -144,7 +144,6 @@ ul {
     font-size: 0.95rem;
 }
 
-/* spin animation for loading icon */
 @keyframes spin {
     to {
         transform: rotate(360deg);
@@ -157,10 +156,10 @@ ul {
 }
 
 /* ==========================================================================
-   05. TOP BAR
-   ========================================================================== */
+   05. TOP COMMUNICATOR BAR
+========================================================================== */
 .top-bar {
-    background-color: var(--blue-deep);
+    background: var(--blue-deep);
     color: rgba(255, 255, 255, 0.85);
     font-size: 0.75rem;
     padding: 10px 0;
@@ -200,7 +199,7 @@ ul {
     padding: 5px 12px;
     border-radius: 4px;
     font-weight: 600;
-    transition: var(--transition);
+    transition: var(--t);
 }
 
 .bar-right a:hover {
@@ -209,8 +208,8 @@ ul {
 }
 
 /* ==========================================================================
-   06. NAVIGATION
-   ========================================================================== */
+   06. MAIN NAVIGATION HEADER
+========================================================================== */
 .main-header {
     background: var(--blue-glass);
     position: sticky;
@@ -291,7 +290,7 @@ ul {
     letter-spacing: 0.8px;
     position: relative;
     padding: 6px 0;
-    transition: var(--transition);
+    transition: var(--t);
 }
 
 .nav-links a:hover,
@@ -334,8 +333,8 @@ ul {
 }
 
 /* ==========================================================================
-   07. HERO
-   ========================================================================== */
+   07. HERO SECTION
+========================================================================== */
 .hero-section {
     position: relative;
     background-image: url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1920&q=80');
@@ -448,8 +447,8 @@ ul {
 }
 
 /* ==========================================================================
-   08. STATS BAR
-   ========================================================================== */
+   08. METRICS STATS BAR
+========================================================================== */
 .stats-bar {
     background: var(--blue-primary);
     padding: 28px 0;
@@ -460,7 +459,6 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0;
     flex-wrap: wrap;
 }
 
@@ -475,8 +473,6 @@ ul {
     font-size: 2rem;
     font-weight: 800;
     color: var(--gold-primary);
-    font-family: var(--font-body);
-    letter-spacing: -1px;
     line-height: 1;
 }
 
@@ -495,8 +491,8 @@ ul {
 }
 
 /* ==========================================================================
-   09. SECTION HEADERS
-   ========================================================================== */
+   09. GLOBAL SECTION HEADERS
+========================================================================== */
 .section-header {
     text-align: center;
     max-width: 680px;
@@ -550,8 +546,8 @@ ul {
 }
 
 /* ==========================================================================
-   10. ABOUT SECTION
-   ========================================================================== */
+   10. ABOUT CORPORATE OVERVIEW
+========================================================================== */
 .about-section {
     padding: 110px 0;
     background: var(--bg-white);
@@ -569,7 +565,7 @@ ul {
     border-radius: var(--radius-l);
     border-top: 4px solid transparent;
     box-shadow: var(--shadow-s);
-    transition: var(--transition);
+    transition: var(--t);
     position: relative;
     overflow: hidden;
 }
@@ -583,7 +579,7 @@ ul {
     height: 100px;
     background: rgba(0, 11, 126, 0.03);
     border-radius: 50%;
-    transition: var(--transition);
+    transition: var(--t);
 }
 
 .about-card:hover {
@@ -617,8 +613,8 @@ ul {
 }
 
 /* ==========================================================================
-   11. DIVISIONS SECTION
-   ========================================================================== */
+   11. ENTERPRISE DIVISIONS
+========================================================================== */
 .divisions-section {
     padding: 110px 0;
     background: var(--bg-light);
@@ -657,7 +653,7 @@ ul {
 .div-num {
     font-weight: 800;
     font-size: 5rem;
-    color: rgba(0, 11, 126, 0.05);
+    color: rgba(0, 11, 126, 0.04);
     position: absolute;
     top: -30px;
     left: -10px;
@@ -713,7 +709,7 @@ ul {
     letter-spacing: 0.5px;
     border-bottom: 2px solid rgba(0, 11, 126, 0.2);
     padding-bottom: 2px;
-    transition: var(--transition);
+    transition: var(--t);
 }
 
 .div-cta:hover {
@@ -759,29 +755,30 @@ ul {
     border: 1px solid rgba(229, 184, 66, 0.25);
 }
 
+/* Visual Background Handlers */
 .div-agro {
-    background-image: url('agro.jpg');
+    background-image: url('https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=800&q=80');
 }
 
 .div-energy {
-    background-image: url('charcoal.jpg');
+    background-image: url('https://images.unsplash.com/photo-1621464714151-6c1724032dbe?auto=format&fit=crop&w=800&q=80');
 }
 
 .div-fashion {
-    background-image: url('fashion.jpg');
+    background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80');
 }
 
 .div-freight {
-    background-image: url('freight.jpg');
+    background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80');
 }
 
 .div-healthcare {
-    background-image: url('care.jpg');
+    background-image: url('https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=800&q=80');
 }
 
 /* ==========================================================================
-   12. WHY US SECTION
-   ========================================================================== */
+   12. THE ADVANTAGE / PERFORMANCE MATRIX
+========================================================================== */
 .why-section {
     padding: 110px 0;
     background: var(--bg-white);
@@ -798,8 +795,7 @@ ul {
     border: 1px solid rgba(0, 11, 126, 0.08);
     border-radius: var(--radius-l);
     background: var(--bg-light);
-    transition: var(--transition);
-    position: relative;
+    transition: var(--t);
 }
 
 .why-card:hover {
@@ -819,7 +815,7 @@ ul {
     color: var(--blue-primary);
     font-size: 1.5rem;
     margin-bottom: 20px;
-    transition: var(--transition);
+    transition: var(--t);
 }
 
 .why-card:hover .why-icon {
@@ -841,8 +837,8 @@ ul {
 }
 
 /* ==========================================================================
-   13. CTA BANNER
-   ========================================================================== */
+   13. CTA PARALLAX BANNER
+========================================================================== */
 .cta-banner {
     background: var(--blue-primary);
     border-top: 1px solid rgba(255, 255, 255, 0.06);
@@ -873,8 +869,8 @@ ul {
 }
 
 /* ==========================================================================
-   14. CONTACT SECTION
-   ========================================================================== */
+   14. CONTACT DESK & COMPLIANCE DATA FORM
+========================================================================== */
 .contact-section {
     padding: 110px 0;
     background: var(--blue-mid);
@@ -954,7 +950,7 @@ ul {
     color: var(--gold-primary);
 }
 
-/* Form card */
+/* Form Card Container */
 .contact-card-form {
     background: var(--blue-deep);
     padding: 44px;
@@ -1003,7 +999,7 @@ ul {
     color: #fff;
     font-family: var(--font-body);
     font-size: 0.88rem;
-    transition: var(--transition);
+    transition: var(--t);
 }
 
 .form-group input::placeholder,
@@ -1029,6 +1025,7 @@ ul {
     min-height: 110px;
 }
 
+/* Status Responses */
 .form-status-msg {
     margin-top: 14px;
     padding: 13px 16px;
@@ -1068,8 +1065,8 @@ ul {
 }
 
 /* ==========================================================================
-   15. FOOTER
-   ========================================================================== */
+   15. CORPORATE FOOTER
+========================================================================== */
 .main-footer {
     background: var(--blue-deep);
     color: #64748b;
@@ -1113,7 +1110,7 @@ ul {
     justify-content: center;
     color: #64748b;
     font-size: 1.1rem;
-    transition: var(--transition);
+    transition: var(--t);
 }
 
 .social-links a:hover {
@@ -1141,7 +1138,7 @@ ul {
     display: flex;
     align-items: center;
     gap: 8px;
-    transition: var(--transition);
+    transition: var(--t);
 }
 
 .footer-links a:hover {
@@ -1175,8 +1172,8 @@ ul {
 }
 
 /* ==========================================================================
-   16. FLOATING ELEMENTS
-   ========================================================================== */
+   16. FLOATING COMMERCE UTILITIES
+========================================================================== */
 .whatsapp-float {
     position: fixed;
     bottom: 28px;
@@ -1192,7 +1189,7 @@ ul {
     font-size: 1.85rem;
     box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
     z-index: 1000;
-    transition: var(--transition);
+    transition: var(--t);
 }
 
 .whatsapp-float:hover {
@@ -1252,19 +1249,19 @@ ul {
 }
 
 /* ==========================================================================
-   17. RESPONSIVE BREAKPOINTS
-   ========================================================================== */
-@media (max-width: 1100px) {
+   17. RESPONSIBILE RESPONSIVE VIEWPORTS
+========================================================================== */
+@media(max-width: 1100px) {
     .footer-grid {
         grid-template-columns: 1.5fr 1fr 1fr;
     }
 
     .footer-grid .footer-col:last-child {
-        grid-column: 1 / -1;
+        grid-column: 1/-1;
     }
 }
 
-@media (max-width: 992px) {
+@media(max-width: 992px) {
     .hero-content h1 {
         font-size: 2.6rem;
     }
@@ -1303,16 +1300,12 @@ ul {
         text-align: center;
     }
 
-    .stats-grid {
-        gap: 0;
-    }
-
     .stat-item {
         padding: 8px 24px;
     }
 }
 
-@media (max-width: 768px) {
+@media(max-width: 768px) {
     .top-bar {
         display: none;
     }
@@ -1426,7 +1419,7 @@ ul {
     }
 }
 
-@media (max-width: 480px) {
+@media(max-width: 480px) {
     .container {
         padding: 0 18px;
     }
