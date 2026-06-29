@@ -77,7 +77,7 @@ ul {
 }
 
 /* ==========================================================================
-   03. SAFE ACCESSIBILITY ANIMATIONS (Failsafe Added)
+   03. SAFE ACCESSIBILITY ANIMATIONS
 ========================================================================== */
 .reveal {
     opacity: 1;
@@ -86,8 +86,6 @@ ul {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-
-    /* Only apply initial hidden state if animations are fully supported */
     body.js-ready .reveal {
         opacity: 0;
         transform: translateY(20px);
@@ -335,6 +333,7 @@ ul {
     background: var(--gold-grad);
     color: #000;
     border-color: transparent;
+    transform: translateY(-2px);
 }
 
 .nav-links a.nav-cta-btn::after {
@@ -342,7 +341,7 @@ ul {
 }
 
 /* ==========================================================================
-   07. HERO SECTION (Fixed Attachment Glitch Solved)
+   07. HERO SECTION
 ========================================================================== */
 .hero-section {
     position: relative;
@@ -406,48 +405,6 @@ ul {
     display: flex;
     gap: 14px;
     flex-wrap: wrap;
-}
-
-.hero-scroll-hint {
-    position: absolute;
-    bottom: 32px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-}
-
-.hero-scroll-hint span {
-    display: block;
-    width: 24px;
-    height: 38px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 12px;
-    position: relative;
-}
-
-.hero-scroll-hint span::after {
-    content: '';
-    position: absolute;
-    top: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 4px;
-    height: 8px;
-    background: var(--gold-primary);
-    border-radius: 2px;
-    animation: scrollDot 1.8s ease-in-out infinite;
-}
-
-@keyframes scrollDot {
-    0% {
-        top: 5px;
-        opacity: 1;
-    }
-
-    100% {
-        top: 20px;
-        opacity: 0;
-    }
 }
 
 /* ==========================================================================
@@ -517,11 +474,6 @@ ul {
     background: rgba(229, 184, 66, 0.06);
 }
 
-.section-tag.light {
-    border-color: rgba(229, 184, 66, 0.4);
-    background: rgba(229, 184, 66, 0.1);
-}
-
 .section-header h2 {
     font-family: var(--font-header);
     font-size: clamp(1.9rem, 3.5vw, 2.6rem);
@@ -574,27 +526,11 @@ ul {
     overflow: hidden;
 }
 
-.about-card::before {
-    content: '';
-    position: absolute;
-    bottom: -30px;
-    right: -30px;
-    width: 100px;
-    height: 100px;
-    background: rgba(0, 11, 126, 0.03);
-    border-radius: 50%;
-    transition: var(--t);
-}
-
 .about-card:hover {
     transform: translateY(-6px);
     border-top-color: var(--gold-primary);
     background: var(--bg-white);
     box-shadow: var(--shadow-l);
-}
-
-.about-card:hover::before {
-    transform: scale(2.5);
 }
 
 .card-icon {
@@ -618,45 +554,168 @@ ul {
 
 /* ==========================================================================
    11. ENTERPRISE DIVISIONS
-================================================================占
-.divisions-section { padding: 110px 0; background: var(--bg-light); }
-.div-row { display: grid; grid-template-columns: 1fr 1fr; grid-template-areas: "text visual"; gap: 70px; align-items: center; margin-bottom: 110px; }
-.div-row:last-child { margin-bottom: 0; }
-.div-row.reverse { grid-template-areas: "visual text"; }
-.div-row.reverse .div-text { grid-area: text; }
-.div-row.reverse .div-visual { grid-area: visual; }
-.div-text { position: relative; padding-top: 20px; }
-.div-num { font-weight: 800; font-size: 5rem; color: rgba(0,11,126,0.04); position: absolute; top: -30px; left: -10px; line-height: 1; user-select: none; z-index: 0; }
-.div-text h3 { font-family: var(--font-header); font-size: 1.9rem; color: var(--text-dark); margin-bottom: 18px; position: relative; z-index: 1; }
-.div-text p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px; line-height: 1.75; }
-.div-list { margin-bottom: 28px; }
-.div-list li { display: flex; align-items: center; gap: 12px; font-size: 0.9rem; font-weight: 600; color: var(--text-dark); margin-bottom: 12px; }
-.div-list i { color: var(--gold-primary); font-size: 1.1rem; flex-shrink: 0; }
-.div-cta { display: inline-flex; align-items: center; gap: 8px; color: var(--blue-primary); font-weight: 700; font-size: 0.88rem; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 2px solid rgba(0,11,126,0.2); padding-bottom: 2px; transition: var(--t); }
-.div-cta:hover { color: var(--gold-primary); border-color: var(--gold-primary); gap: 14px; }
-.div-visual { position: relative; height: 420px; border-radius: var(--radius-l); box-shadow: var(--shadow-l); background-size: cover; background-position: center; overflow: hidden; }
-.div-visual::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 50%, rgba(0,5,61,0.45) 100%); }
-.div-visual-badge { position: absolute; bottom: 20px; left: 20px; z-index: 2; display: inline-flex; align-items: center; gap: 8px; background: rgba(0,5,61,0.75); backdrop-filter: blur(8px); color: var(--gold-primary); font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 7px 14px; border-radius: var(--radius-s); border: 1px solid rgba(229,184,66,0.25); }
+========================================================================== */
+.divisions-section {
+    padding: 110px 0;
+    background: var(--bg-light);
+}
 
-/* Visual Background Handlers */
+.div-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "text visual";
+    gap: 70px;
+    align-items: center;
+    margin-bottom: 110px;
+}
+
+.div-row:last-child {
+    margin-bottom: 0;
+}
+
+.div-row.reverse {
+    grid-template-areas: "visual text";
+}
+
+.div-row.reverse .div-text {
+    grid-area: text;
+}
+
+.div-row.reverse .div-visual {
+    grid-area: visual;
+}
+
+.div-text {
+    position: relative;
+    padding-top: 20px;
+}
+
+.div-num {
+    font-weight: 800;
+    font-size: 5rem;
+    color: rgba(0, 11, 126, 0.04);
+    position: absolute;
+    top: -30px;
+    left: -10px;
+    line-height: 1;
+    user-select: none;
+    z-index: 0;
+}
+
+.div-text h3 {
+    font-family: var(--font-header);
+    font-size: 1.9rem;
+    color: var(--text-dark);
+    margin-bottom: 18px;
+    position: relative;
+    z-index: 1;
+}
+
+.div-text p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+    line-height: 1.75;
+}
+
+.div-list {
+    margin-bottom: 28px;
+}
+
+.div-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+
+.div-list i {
+    color: var(--gold-primary);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.div-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--blue-primary);
+    font-weight: 700;
+    font-size: 0.88rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid rgba(0, 11, 126, 0.2);
+    padding-bottom: 2px;
+    transition: var(--t);
+}
+
+.div-cta:hover {
+    color: var(--gold-primary);
+    border-color: var(--gold-primary);
+    gap: 14px;
+}
+
+.div-visual {
+    position: relative;
+    height: 420px;
+    border-radius: var(--radius-l);
+    box-shadow: var(--shadow-l);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+}
+
+.div-visual::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 50%, rgba(0, 5, 61, 0.45) 100%);
+}
+
+.div-visual-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 5, 61, 0.75);
+    backdrop-filter: blur(8px);
+    color: var(--gold-primary);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 7px 14px;
+    border-radius: var(--radius-s);
+    border: 1px solid rgba(229, 184, 66, 0.25);
+}
+
+/* Workspace Mapped Images */
 .div-agro {
-    background-image: url('https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=800&q=80');
+    background-image: url('agro.jpg');
 }
 
 .div-energy {
-    background-image: url('https://images.unsplash.com/photo-1621464714151-6c1724032dbe?auto=format&fit=crop&w=800&q=80');
+    background-image: url('charcoal.jpg');
 }
 
 .div-fashion {
-    background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80');
+    background-image: url('fashion.jpg');
 }
 
 .div-freight {
-    background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80');
+    background-image: url('freight.jpg');
 }
 
 .div-healthcare {
-    background-image: url('https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=800&q=80');
+    background-image: url('care.jpg');
 }
 
 /* ==========================================================================
@@ -720,7 +779,7 @@ ul {
 }
 
 /* ==========================================================================
-   13. CTA PARALLAX BANNER
+   13. CTA BANNER
 ========================================================================== */
 .cta-banner {
     background: var(--blue-primary);
@@ -752,7 +811,7 @@ ul {
 }
 
 /* ==========================================================================
-   14. CONTACT DESK & COMPLIANCE DATA FORM
+   14. CONTACT DESK & DATA FORM
 ========================================================================== */
 .contact-section {
     padding: 110px 0;
@@ -806,10 +865,6 @@ ul {
     color: #fff;
 }
 
-.c-val a:hover {
-    color: var(--gold-primary);
-}
-
 .trust-badges {
     display: flex;
     flex-wrap: wrap;
@@ -833,7 +888,6 @@ ul {
     color: var(--gold-primary);
 }
 
-/* Form Card Container */
 .contact-card-form {
     background: var(--blue-deep);
     padding: 44px;
@@ -885,11 +939,6 @@ ul {
     transition: var(--t);
 }
 
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-    color: #475569;
-}
-
 .form-group select option {
     background: var(--blue-mid);
 }
@@ -900,7 +949,6 @@ ul {
     outline: none;
     border-color: var(--gold-primary);
     box-shadow: 0 0 0 3px rgba(229, 184, 66, 0.12);
-    background: rgba(0, 0, 0, 0.35);
 }
 
 .form-group textarea {
@@ -908,7 +956,6 @@ ul {
     min-height: 110px;
 }
 
-/* Status Responses */
 .form-status-msg {
     margin-top: 14px;
     padding: 13px 16px;
@@ -918,19 +965,6 @@ ul {
     align-items: center;
     gap: 10px;
     font-weight: 500;
-    animation: fadeUp 0.3s ease;
-}
-
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(-6px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 .form-status-msg.success {
@@ -963,10 +997,6 @@ ul {
     gap: 48px;
     padding-bottom: 60px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.footer-brand .logo-area {
-    margin-bottom: 20px;
 }
 
 .f-desc {
@@ -1029,12 +1059,6 @@ ul {
     padding-left: 4px;
 }
 
-.footer-links i {
-    color: var(--gold-primary);
-    font-size: 0.9rem;
-    flex-shrink: 0;
-}
-
 .footer-bottom {
     padding: 24px 0;
     display: flex;
@@ -1049,13 +1073,8 @@ ul {
     color: #475569;
 }
 
-.f-subtext {
-    font-size: 0.78rem;
-    color: #334155;
-}
-
 /* ==========================================================================
-   16. FLOATING COMMERCE UTILITIES
+   16. FLOATING UTILITIES
 ========================================================================== */
 .whatsapp-float {
     position: fixed;
@@ -1077,27 +1096,6 @@ ul {
 
 .whatsapp-float:hover {
     transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 8px 28px rgba(37, 211, 102, 0.6);
-}
-
-.wa-tooltip {
-    position: absolute;
-    right: 70px;
-    background: rgba(0, 5, 61, 0.92);
-    color: #fff;
-    padding: 7px 14px;
-    font-size: 0.78rem;
-    font-weight: 600;
-    border-radius: var(--radius-s);
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.whatsapp-float:hover .wa-tooltip {
-    opacity: 1;
 }
 
 #btt {
@@ -1127,12 +1125,8 @@ ul {
     pointer-events: auto;
 }
 
-#btt:hover {
-    transform: translateY(-3px);
-}
-
 /* ==========================================================================
-   17. RESPONSIBILE RESPONSIVE VIEWPORTS
+   17. RESPONSIVE VIEWPORTS
 ========================================================================== */
 @media(max-width: 1100px) {
     .footer-grid {
@@ -1206,9 +1200,7 @@ ul {
         flex-direction: column;
         padding: 28px 24px;
         gap: 18px;
-        border-top: 1px solid rgba(255, 255, 255, 0.06);
         display: none;
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
     }
 
     .nav-links.open {
@@ -1221,25 +1213,8 @@ ul {
         padding: 10px 0;
     }
 
-    .nav-links a.nav-cta-btn {
-        width: auto;
-    }
-
     .hero-section {
         min-height: 70vh;
-    }
-
-    .hero-content h1 {
-        font-size: 2.1rem;
-    }
-
-    .hero-content p {
-        font-size: 0.97rem;
-    }
-
-    .hero-actions {
-        flex-direction: column;
-        gap: 12px;
     }
 
     .stats-grid {
@@ -1249,10 +1224,6 @@ ul {
 
     .stat-divider {
         display: none;
-    }
-
-    .stat-item {
-        padding: 10px;
     }
 
     .about-grid {
@@ -1275,55 +1246,5 @@ ul {
     .footer-grid {
         grid-template-columns: 1fr;
         gap: 36px;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .whatsapp-float {
-        width: 52px;
-        height: 52px;
-        bottom: 18px;
-        right: 18px;
-        font-size: 1.6rem;
-    }
-
-    #btt {
-        bottom: 82px;
-        right: 20px;
-        width: 40px;
-        height: 40px;
-    }
-
-    .wa-tooltip {
-        display: none;
-    }
-}
-
-@media(max-width: 480px) {
-    .container {
-        padding: 0 18px;
-    }
-
-    .hero-content h1 {
-        font-size: 1.8rem;
-    }
-
-    .section-header h2 {
-        font-size: 1.8rem;
-    }
-
-    .div-text h3 {
-        font-size: 1.5rem;
-    }
-
-    .cta-banner-text h2 {
-        font-size: 1.6rem;
-    }
-
-    .contact-card-form {
-        padding: 22px 16px;
     }
 }
