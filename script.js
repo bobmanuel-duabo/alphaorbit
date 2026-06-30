@@ -163,4 +163,52 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  /* ---------- FAQ Accordion ---------- */
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(function (item) {
+    const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+    if (!question || !answer) return;
+    question.addEventListener('click', function () {
+      const isOpen = item.classList.contains('open');
+      faqItems.forEach(function (other) {
+        other.classList.remove('open');
+        other.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        other.querySelector('.faq-answer').style.maxHeight = null;
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        question.setAttribute('aria-expanded', 'true');
+        answer.style.maxHeight = answer.scrollHeight + 24 + 'px';
+      }
+    });
+  });
+
+  /* ---------- Cookie Consent Banner ---------- */
+  const cookieBanner = document.getElementById('cookieBanner');
+  const cookieAccept = document.getElementById('cookieAccept');
+  const cookieDecline = document.getElementById('cookieDecline');
+  const COOKIE_KEY = 'alphaorbit_cookie_consent';
+
+  if (cookieBanner) {
+    let consent = null;
+    try { consent = localStorage.getItem(COOKIE_KEY); } catch (e) { /* storage unavailable */ }
+
+    if (!consent) {
+      window.setTimeout(function () { cookieBanner.classList.add('show'); }, 600);
+    }
+
+    function setConsent(value) {
+      try { localStorage.setItem(COOKIE_KEY, value); } catch (e) { /* storage unavailable */ }
+      cookieBanner.classList.remove('show');
+    }
+
+    if (cookieAccept) {
+      cookieAccept.addEventListener('click', function () { setConsent('accepted'); });
+    }
+    if (cookieDecline) {
+      cookieDecline.addEventListener('click', function () { setConsent('declined'); });
+    }
+  }
+
 });

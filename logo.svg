@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96">
+  <defs>
+    <linearGradient id="aoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1f5c"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <linearGradient id="aoGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5c451"/>
+      <stop offset="100%" stop-color="#caa23a"/>
+    </linearGradient>
+  </defs>
+  <circle cx="48" cy="48" r="46" fill="url(#aoGrad)" stroke="url(#aoGold)" stroke-width="2.5"/>
+  <ellipse cx="48" cy="48" rx="34" ry="14" fill="none" stroke="url(#aoGold)" stroke-width="3" transform="rotate(-25 48 48)"/>
+  <ellipse cx="48" cy="48" rx="34" ry="14" fill="none" stroke="url(#aoGold)" stroke-width="3" opacity="0.55" transform="rotate(25 48 48)"/>
+  <circle cx="48" cy="48" r="9" fill="url(#aoGold)"/>
+</svg>
