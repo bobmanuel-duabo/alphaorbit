@@ -1768,15 +1768,14 @@ ul {
 ========================================================================== */
 .division-hero {
     position: relative;
-    background-size: cover;
-    /* Scales the image proportionally to fill the area */
-    background-position: center;
-    /* Keeps the main focus of your image in the middle */
-    background-repeat: no-repeat;
-    /* Prevents the image from tiling */
-    padding: 120px 0;
-    /* Gives the hero section plenty of breathing room */
+    background-color: transparent !important;
+    /* Forces the stubborn blue background away */
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    padding: 100px 0;
     color: #fff;
+    z-index: 1;
 }
 
 /* 01. Agro & Seafood Export */
