@@ -1815,3 +1815,8 @@ ul {
 .div-catering {
     background-image: url('catering.jpg') !important;
 }
+
+.div-freight {
+    background-position: center 60% !important;
+    /* Shifts the image up to show more of the ship */
+}

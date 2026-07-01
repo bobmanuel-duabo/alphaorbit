@@ -211,4 +211,52 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  /* ---------- Interactive Freight Calculator Logic ---------- */
+  const freightForm = document.getElementById('freightForm');
+  if (freightForm) {
+    freightForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Variable Base Configs
+      const modeRates = { ocean: 0.45, air: 4.20, land: 1.15 };
+      const regionSurcharges = { domestic: 150, international: 520 };
+
+      // Inputs Values
+      const mode = document.getElementById('transitMode').value;
+      const weight = parseFloat(document.getElementById('cargoWeight').value);
+      const origin = document.getElementById('origin').value;
+      const destination = document.getElementById('destination').value;
+
+      if (isNaN(weight) || weight <= 0) return;
+
+      // Rate Computations
+      let costPerKg = modeRates[mode] || 0.50;
+      let baseFreightCost = weight * costPerKg;
+      let baseSurcharge = regionSurcharges[destination] || 200;
+
+      // Handle Cross-Border / High Intermodal Multipliers
+      if (origin === 'international' && destination === 'international') {
+        baseSurcharge *= 1.4;
+      }
+
+      const totalEstimate = baseFreightCost + baseSurcharge;
+
+      // DOM Updates
+      const resultBox = document.getElementById('calcResult');
+      const priceDisplay = document.getElementById('estimatedPrice');
+
+      if (resultBox && priceDisplay) {
+        priceDisplay.textContent = '$' + totalEstimate.toLocaleString('en-US', {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2
+        }) + ' USD';
+
+        resultBox.style.display = 'block';
+
+        // Scroll adjustment to seamlessly view pricing data
+        resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    });
+  }
+
 });
