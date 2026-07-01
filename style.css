@@ -1778,6 +1778,12 @@ ul {
     z-index: 1;
 }
 
+.division-hero::before,
+.division-hero::after {
+    background: none !important;
+    display: none !important;
+}
+
 /* 01. Agro & Seafood Export */
 .div-agro {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url('agro.jpg');
