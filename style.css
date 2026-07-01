@@ -1764,12 +1764,18 @@ ul {
 }
 
 /* ==========================================================================
-   07b. DIVISION HERO BACKGROUNDS
+   07b. FINALIZED HERO RESOLUTIONS
 ========================================================================== */
+
+/* Overwrites the high-weight corporate navy overlay on division banners */
+.division-hero .hero-overlay {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.15)) !important;
+}
+
+/* Sanitizes the division container rules */
 .division-hero {
     position: relative;
     background-color: transparent !important;
-    /* Forces the stubborn blue background away */
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
@@ -1778,38 +1784,34 @@ ul {
     z-index: 1;
 }
 
+/* Strips fallback pseudo colors */
 .division-hero::before,
 .division-hero::after {
     background: none !important;
     display: none !important;
 }
 
-/* 01. Agro & Seafood Export */
+/* Direct explicit asset mapping overrides */
 .div-agro {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url('agro.jpg');
+    background-image: url('agro.jpg') !important;
 }
 
-/* 02. Energy & Biomass Export */
 .div-energy {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url('charcoal.jpg');
+    background-image: url('charcoal.jpg') !important;
 }
 
-/* 03. Fashion & Accessories */
 .div-fashion {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url('fashion.jpg');
+    background-image: url('fashion.jpg') !important;
 }
 
-/* 04. Global Freight & Intermodal Logistics */
 .div-freight {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url('freight.jpg');
+    background-image: url('freight.jpg') !important;
 }
 
-/* 05. International Caregiving Staffing */
 .div-healthcare {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url('care.jpg');
+    background-image: url('care.jpg') !important;
 }
 
-/* 06. Food Services & Catering */
 .div-catering {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url('catering.jpg');
+    background-image: url('catering.jpg') !important;
 }
