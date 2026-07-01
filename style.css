@@ -1769,39 +1769,42 @@ ul {
 .division-hero {
     position: relative;
     background-size: cover;
+    /* Scales the image proportionally to fill the area */
     background-position: center;
+    /* Keeps the main focus of your image in the middle */
     background-repeat: no-repeat;
-    padding: 100px 0;
-    /* Adjust height padding as needed */
+    /* Prevents the image from tiling */
+    padding: 120px 0;
+    /* Gives the hero section plenty of breathing room */
     color: #fff;
 }
 
 /* 01. Agro & Seafood Export */
 .div-agro {
-    background-image: url('images/agro-hero.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url('agro.jpg');
 }
 
 /* 02. Energy & Biomass Export */
 .div-energy {
-    background-image: url('images/energy-hero.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url('charcoal.jpg');
 }
 
 /* 03. Fashion & Accessories */
 .div-fashion {
-    background-image: url('images/fashion-hero.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url('fashion.jpg');
 }
 
 /* 04. Global Freight & Intermodal Logistics */
 .div-freight {
-    background-image: url('images/freight-hero.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url('freight.jpg');
 }
 
 /* 05. International Caregiving Staffing */
 .div-healthcare {
-    background-image: url('images/healthcare-hero.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url('care.jpg');
 }
 
 /* 06. Food Services & Catering */
 .div-catering {
-    background-image: url('images/catering-hero.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url('catering.jpg');
 }
